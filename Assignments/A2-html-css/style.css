@@ -1,0 +1,167 @@
+@font-face {
+    font-family: "pangolin";
+    src: url(fonts/Pangolin-Regular.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+
+.wrapper {
+    background-color: lightblue;
+}
+
+.header-clearfix {
+    background-image: url(https://thumbs.dreamstime.com/z/elaborate-vintage-printed-paper-background-close-up-old-elaborately-printed-backdrop-shades-white-grey-106168511.jpg);
+    height: 120px;    
+}
+
+.header-clearfix:after {
+    clear: both;
+}
+
+.site-logo {
+    margin-left: 100px;
+}
+
+.site-logo img{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin-top: 10px;
+}
+
+.nav-bar {
+    float: right;
+    margin: 30px 100px;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    display: inline;
+    padding-left: 20px;
+    font-family: pangolin;
+    font-weight: 100;
+}
+
+.first-block-details {
+    height: 50px;
+    background-color: #a9a6a6;
+}
+
+.first-block-details p{
+    font-family: pangolin;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.data-details-clearfix {
+    height: 350px;
+}
+
+.data-details-clearfix:after {
+    width: 100%;
+    margin-left: 75px;
+    clear: both;
+}
+
+.data-wrapper {
+    float: left;
+    width: 800px;
+    height: 350px;
+    background-color: darkgrey;
+}
+
+.details-sidebar {
+    float: left;
+    height: 350px;
+    width: 400px;
+    background-color: darkkhaki;
+}
+
+.second-block-details {
+    height: 50px;
+    background-color: #a9a6a6;
+}
+
+.second-block-details p {
+    font-family: pangolin;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.data-container {
+    margin-left: 200px;
+}
+
+.data-wrapper-clearfix {
+    clear: both;
+}
+
+.testimonial-content {
+    float: left;
+    width: 915px;
+    height: 350px;
+}
+
+.testimonial-content-image {
+    height: 350px;
+    width: 915px;
+}
+
+.precaution-section-clearfix {
+    height: 200px;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.precaution-section-clearfix:after {
+    clear: both;
+}
+
+.precaution-section-first {
+    background-color: chocolate;
+    height: 200px;
+    width: 33.33%;
+    float: left;
+}
+
+.precaution-section-first img{
+    height: 200px;
+    width: 100%;
+}
+.precaution-section-second {
+    background-color: darkgrey;
+    height: 200px;
+    width: 33.33%;
+    float: left;
+}
+
+.precaution-section-second img{
+    height: 200px;
+    width: 100%;
+}
+
+.precaution-section-third {
+    background-color: lightcoral;
+    height: inherit;
+    width: 33.33%;
+    float: left;
+}
+
+.precaution-section-third img{
+    height: 200px;
+    width: 100%;
+}
+
+.footer {
+    background-color: lightgray;
+    height: 70px;
+}
+
+.footer p {
+    font-family: pangolin;
+    margin-top: 0px;
+    text-align: center;
+    font-size: 30px;
+}
