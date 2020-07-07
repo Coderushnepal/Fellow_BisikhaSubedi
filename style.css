@@ -1,0 +1,432 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 22px;
+}
+
+/* Clearing the floats */
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* floats : left and right */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. HEADER CSS */
+.main-header {
+    margin-bottom: 13.55px;
+}
+
+.site-logo {
+    padding-top: 24px
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    padding-top: 34px;
+    margin-bottom: 20.45px;
+}
+
+.ham-burger {
+    height: 2px;
+    width: 30px;
+    border: 1px solid #000000;
+    margin-bottom: 7px;
+}
+/* End of header CSS */
+
+/* 2. Intro Section CSS */
+
+.intro-container {
+    background: url(./images/Background.png);
+    background-size: cover; 
+}
+
+.intro-container-left {
+    width: 100%;
+}
+
+.intro-container-right {
+    width: 100%;
+}
+
+.intro-container-right img {
+    width: 100%;
+}
+
+.intro-container-left  h1{
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.intro-container-left {
+    margin: 60px auto;
+}
+
+.intro-container-left p{
+    font-size: 14px;
+    margin: 25px 0 50px;
+    line-height: 140.62%;
+}
+
+.larger-view , .medium-view {
+    display: none;
+}
+
+.smaller-view {
+    display: block;
+}
+
+.intro-container-left .btn-primary {
+    font-size: 14px;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 5px;
+    border: 1px solid #798BFE;
+    background: #798BFE;
+}
+
+/* End of Intro Section */
+
+/* 3. Executive Message Section */
+.message-container-left , .message-container-right, .message-container-left img {
+    width: 100%;
+}
+
+.intro-heading {
+    margin: 50px 0 40px 0;
+}
+
+.intro-heading p {
+    font-size: 26px;
+    line-height: 36px;  
+}
+
+.message-container-right .msg-content-first {
+    font-size: 14px;
+    line-height: 140.62%;
+    margin: 26.75px 0 12px 0;
+}
+
+.message-container-right .msg-content-second {
+    font-size: 12px;
+    line-height: 140.62%;
+}
+
+.message-container-right a {
+    font-size: 12px;
+    line-height: 140.62%;
+    margin: 20px 0 50px 0;
+
+    text-decoration-line: underline;
+    color: #798BFE;
+}
+
+/* End of Executive Message Section */
+
+/* 4. Upcoming trending section  */
+.trending , .trending-col img {
+    width: 100%;
+}
+
+.trending-heading {
+    margin: 60px 0 44px 20px;
+}
+
+.trending-heading h1 {
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.trending-col {
+    padding: 0 20px;
+    margin-bottom: 36px;
+}
+
+.trending-col h1{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 28px;
+    margin-right: 190px;
+}
+
+.trending-col span {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.trending-col .first{
+    margin-top: 16px;
+}
+
+.trending-col .last{
+    margin-top: 5px;
+}
+
+.trending-col .btn-primary {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    padding: 9px 14px 10px 15px;
+
+    font-size: 14px;
+    line-height: 16px;
+    background: #798BFE;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer , .footer-top {
+    width: 100%;
+}
+
+.footer-inner-bottom {
+    display: none;
+}
+
+.footer-inner-bottom li {
+    list-style-type: none;
+}
+
+.footer-inner-top .left {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 9px 0 9px 20px;
+}
+
+.footer-inner {
+    width: 100%;
+}
+/* Media Query */
+
+/* For Tablet */
+@media screen and (min-width: 768px) { 
+
+    /* navigation */
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: block;
+        padding-left: 60px;
+        padding-top: 24px;
+    }
+
+    .nav-bar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        padding-top: 34px;
+        padding-right: 64px;
+        margin-bottom: 34px;
+    }
+
+    .ham-burger {
+        height: 2px;
+        width: 30px;
+        border: 1px solid #000000;
+        margin-bottom: 7px;
+    }
+
+    /* Introduction */
+    .intro-container-left  , .intro-container-right {
+        width: 50%;
+    }
+
+    .intro-container-left {
+        padding-left: 63px;
+    }
+
+    .smaller-view {
+        display: none;
+    }
+
+    .medium-view {
+        display: block;       
+    }
+
+    /* Executive Message */
+    .message-container-left .medium-view{
+        padding: 64px 44px 0 60px;
+    }
+
+    .message-container-left , .message-container-right , .intro-heading {
+        width: 50%;
+    }
+
+    .message-container .intro-heading {
+        margin-bottom: 16px;
+    }
+
+    .message-container-right {
+        padding-right: 59px;
+    }
+
+    .message-container-right  .msg-content-first {
+        margin-top: 0;
+    }
+
+    /* Upcoming Training */
+    .trending-col {
+        width: 50%;
+    }
+
+    .trending-heading h1 {
+        padding-left: 287px;
+    }
+
+    .trending-col h1 {
+        margin-right: 179px;
+    }
+
+    /* footer */
+    .footer-inner-top .right {
+        display: none;
+    }
+
+    .footer {
+        width: 33.33%;
+    }
+
+    .footer-inner  {
+        width: 100%;
+    }
+
+    .footer-inner-top h1 {
+        padding-left: 61px;
+    }
+
+    .footer-inner-bottom {
+        display: block;
+    }
+
+    .footer-inner ul{
+        padding-left: 61px;
+    }
+
+    .footer-inner-top .left {
+        margin-left: 0px;
+    }
+
+    .footer-inner-bottom li{
+        font-size: 14px;
+        line-height: 24px;
+        padding-bottom: 4px;
+    }
+}
+
+/* For Desktop */
+@media screen and (min-width: 1200px) {
+
+    /* navigation */
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: block;
+        margin-bottom: 33px;
+    }
+
+    .nav-bar {
+        display: block;
+        margin-right: 165px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-items {
+        margin: 43px 30px 0 0;
+    }
+
+    .nav-items li {
+        list-style-type: none;
+        display: inline-block;
+        font-size: 13px;
+        line-height: 15px;
+        padding-right: 30px;
+    }
+
+    .nav-bar .btn-primary {
+        padding: 14px 25px;
+        border-radius: 5px;
+        background: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
+        margin-top: 28px;
+    }
+
+    /* Introduction */
+
+    .medium-view {
+        display: none;
+    }
+
+    .larger-view {
+        display: block;
+    }
+
+    /* Executive Message */
+
+    .message-container-left .larger-view {
+        margin-top: 110px;
+    }
+
+    .intro-heading .msg-heading {
+        margin-top: 164px;
+        padding-left: 136px;
+    }
+
+    .message-container-right {
+        padding-left: 136px;
+    }
+
+    /* Upcoming Trending */
+    .trending-col {
+        width: 25%;
+    }
+
+    .trending-col .upcoming-heading {
+        margin-right: 66px;
+    }
+
+    .trending-heading h1 {
+        padding-left: 460px;
+    }
+
+    .trending-col .btn-primary {
+        margin-bottom: 100px;
+    }
+}
