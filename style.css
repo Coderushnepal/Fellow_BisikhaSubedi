@@ -50,6 +50,10 @@ body {
     display: none;
 }
 
+.nav-items li i {
+    display: none;
+}
+
 .hamburger {
     display: block;
     padding-top: 34px;
@@ -61,6 +65,15 @@ body {
     width: 30px;
     border: 1px solid #000000;
     margin-bottom: 7px;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.hamburger:hover ~ .nav-bar {
+    display: block;
 }
 /* End of header CSS */
 
@@ -226,6 +239,19 @@ body {
 .footer-inner {
     width: 100%;
 }
+
+.footer-inner img {
+    margin-bottom: 22px;
+}
+
+.footer-inner-top i {
+    padding-top: 12px;
+}
+
+.footer-bottom .copyright p {
+    font-size: 10px;
+    line-height: 28px;
+}
 /* Media Query */
 
 /* For Tablet */
@@ -258,6 +284,19 @@ body {
         width: 30px;
         border: 1px solid #000000;
         margin-bottom: 7px;
+    }
+
+    .nav-bar li {
+        list-style-type: none;
+        font-size: 14px;
+    }
+    
+    .hamburger:hover ~ .nav-bar {
+        display: block;
+    }
+
+    .nav-items li i {
+        display: none;
     }
 
     /* Introduction */
@@ -345,6 +384,14 @@ body {
         line-height: 24px;
         padding-bottom: 4px;
     }
+
+    .footer-inner-bottom i {
+        display: none;
+    }
+
+    .footer-inner img {
+        display: none;
+    }
 }
 
 /* For Desktop */
@@ -379,6 +426,10 @@ body {
         font-size: 13px;
         line-height: 15px;
         padding-right: 30px;
+    }
+
+    .nav-items li i {
+        padding-left: 4px;
     }
 
     .nav-bar .btn-primary {
@@ -428,5 +479,14 @@ body {
 
     .trending-col .btn-primary {
         margin-bottom: 100px;
+    }
+
+    /* footer */
+    .footer-inner-bottom i {
+        display: none;
+    }
+
+    .footer-inner img {
+        display: none;
     }
 }
