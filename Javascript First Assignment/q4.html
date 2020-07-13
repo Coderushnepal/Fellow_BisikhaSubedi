@@ -10,19 +10,20 @@
             for ( var i=0; i < strarr.length; i++ ) {
                 var currentstr = strarr[i]; // 8888 , which is also a string
 
-                for (var j=1; j < currentstr.length; j++) {
-                    if ( currentstr.charAt(j) != currentstr.charAt(0) ) {
-                        emptyarr="";
-                    }
-                    else {
+                for (var j=1; j <= currentstr.length; j++) {
+                    if ( currentstr.charAt(j) === currentstr.charAt(0) ) {
                         emptyarr.push(currentstr);
+                    } else {
+                        emptyarr.push();
+                        break;
                     }
                 }
             }
             return emptyarr;
+            console.log(emptyarr);
         }
 
-        var pass = ["88", "999", "22", "545", "133"];
+        var pass = ["123", "999", "22", "545", "133"];
 
         identicalFunction(pass);
     </script>
