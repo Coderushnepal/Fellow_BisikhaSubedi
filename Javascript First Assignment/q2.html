@@ -10,7 +10,6 @@
             var splittedarr = reveivedstring.split(" "); //array that containes individual string of whole string
 
             var finalString = "";
-            var xyz = "";
 
             for ( var i=0; i< splittedarr.length; i++ ) {
                 
@@ -19,16 +18,15 @@
                 
                 if (length > 4) {          
                         var replacestr = " ";
-
                         for( var j=0; j<length; j++ ){ 
                             replacestr = replacestr.concat("*");
                             }             
-                        var individualstr = replacestr;
+                        var individualstr = replacestr + ' ';
                         // console.log(individualstr); 
                     } 
-                    var finalString = xyz.concat(individualstr);
-                    // console.log(finalString);
+                    var finalString = finalString.concat(individualstr);
             }
+            console.log(finalString);
         }
 
         inputstr("Brown are colour fantastic is");
