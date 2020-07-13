@@ -1,0 +1,557 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 22px;
+}
+
+/* clearing the floats */
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* floats left and right */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. Header */
+
+.site-logo {
+    padding: 24px 0 10.45px 20px;
+}
+
+.hamburger {
+    padding: 28px 20px 14.45px 0;
+}
+
+.main-header {
+    margin-bottom: 13.45px;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.logo-mobile {
+    display: block;
+}
+
+.ham-burger {
+    width: 30px;
+    height: 2px;
+    margin-top: 6px;
+    border: 1px solid #000000;
+}
+
+.nav-bar {
+    display: none;
+}
+
+.hamburger:hover ~ .nav-bar {
+    display: block;
+}
+
+.hamburger {
+    position: relative;
+}
+
+.nav-bar li {
+    list-style-type: none;
+    font-size: 14px;
+    padding-bottom: 5px;
+}  
+
+.nav-bar {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+}
+
+.btn-nav-primary {
+    padding: 14px 25px;
+    background: #798BFE;
+    border-radius: 5px;
+    color: #ffffff;
+    border: #798BFE;
+}
+
+/* 2. Intro Section */
+.intro-container {
+    background: url(./images/Background.png);
+    background-size: cover; 
+}
+
+.intro-container-left {
+    width: 100%;
+    padding: 60px 55px 60px 20px;
+}
+
+.intro-container-right {
+    width: 100%;
+}
+
+.intro-container-right img {
+    width: 100%;
+    padding: 0px 28.89px 10.53px 20px;
+}
+
+.intro-container-left  h1{
+    font-size: 40px;
+    line-height: 49px;
+    color: #000000;
+}
+
+.intro-container-left p{
+    font-size: 14px;
+    margin: 25px 0 50px;
+    line-height: 140.62%;
+}
+
+.larger-view , .medium-view {
+    display: none;
+}
+
+.smaller-view {
+    display: block;
+}
+
+.intro-btn-primary {
+    padding: 19px 36px;
+    background: #798BFE;
+    border-radius: 5px;
+    color: #ffffff;
+    border: #798BFE;
+}
+
+.intro-heading {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+/* End of Intro Section */
+
+/* Message of ED Section */
+.message-container-left , .message-container-right, .message-container-left img {
+    width: 100%;
+}
+
+.intro-heading p {
+    font-size: 26px;
+    line-height: 36px;  
+}
+
+.message-container-right .msg-content-first {
+    font-size: 14px;
+    line-height: 140.62%;
+    margin: 26.75px 0 12px 0;
+}
+
+.message-container-right .msg-content-second {
+    font-size: 12px;
+    line-height: 140.62%;
+}
+
+.message-container-right a {
+    font-size: 12px;
+    line-height: 140.62%;
+    margin: 20px 0 50px 0;
+
+    text-decoration-line: underline;
+    color: #798BFE;
+}
+
+/* Footer */
+.footer-heading .footer-heading-list {
+    display: none;
+}
+
+.heading-title span {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 9px 0px 0px 20px;
+}
+
+.heading-title i {
+    margin-right: 17px;
+    display: block;
+}
+
+.footer-bottom span {
+    font-size: 10px;
+    line-height: 28px;   
+} 
+
+.footer-heading {
+    display: 100%;
+}
+
+.footer-bottom .social {
+    display: none;
+}
+
+.line1 {
+    display: none;
+}
+
+.line3 {
+    display: none;
+}
+
+/* Upcoming Trending */
+.trending-heading {
+    text-align: center;
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.trending-heading h1 {
+    margin-top: 60px;
+    margin-bottom: 44px;
+    font-size: 26px;
+    line-height: 42px;
+}
+
+.trending-col img {
+    width: 100%;
+}
+
+.trending-col h1{
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.trending-col span {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+.trending-col .first{
+    margin-top: 16px;
+}
+
+.trending-col .last{
+    margin-top: 5px;
+}
+
+.trending-col .btn-upcoming {
+    margin-top: 20px;
+    margin-bottom: 36px;
+    padding: 9px 14px 10px 15px;
+
+    font-size: 14px;
+    line-height: 16px;
+    background: #798BFE;
+    border: #798BFE;
+    border-radius: 5px;
+    color: #ffffff;
+}
+/* Media Query for Tablet */
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+
+    /* nav bar */
+   .site-logo {
+        padding: 24px 0 24px 60px;
+    }
+
+    .hamburger {
+        padding: 28px 60px 28px 0;
+    }
+
+    /* Intro Section */
+    .intro-container-left  , .intro-container-right {
+        width: 50%;
+    }
+
+    .intro-container-left {
+        padding: 88px 0 80px 63px;
+    }
+
+    .intro-container-right {
+        padding: 48px 20.75px 88.55px 0;
+    }
+
+    .smaller-view {
+        display: none;
+    }
+
+    .medium-view {
+        display: block;       
+    }
+
+    .footer-heading {
+        width: 33.333333%;
+        float: left;
+    }
+
+    .footer-heading .footer-heading-list {
+        display: block; 
+    }
+
+    .footer-heading .footer-heading-list li {
+        list-style-type: none;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .footer-bottom span {
+        font-size: 12px;
+        line-height: 28px;
+    }
+
+    .footer-bottom .social{
+        display: none;
+    }
+
+    .heading-title i {
+        display: none;
+    }
+
+    .footer-heading .footer-heading-list a {
+        text-decoration: none;
+        color: #000000;
+    }
+
+    .footer-heading .footer-heading-list {
+        margin-left: 20px;
+    }
+
+    .line1 {
+        display: none;
+    }
+
+    .line2 {
+        display: none;
+    }
+
+    .line3 {
+        display: block;
+        margin-top: 25px;
+        margin-bottom: 14px
+    }
+
+    .footer-bottom {
+        margin-bottom: 16px;
+    }
+
+    .heading-title span {
+        font-weight: bold;
+    }
+
+    .footer-heading .heading-title .social{
+        margin-top: 15px;
+    }
+
+    /* Executive Message */
+    .message-container-left .medium-view{
+        padding: 64px 44px 0 60px;
+    }
+
+    .message-container-left , .message-container-right , .intro-heading {
+        width: 50%;
+    }
+
+    .message-container .intro-heading {
+        margin-bottom: 16px;
+    }
+
+    .message-container-right {
+        padding-right: 59px;
+    }
+
+    .message-container-right  .msg-content-first {
+        margin-top: 0;
+    }
+
+    /* Upcoming Trending */
+    .trending-col {
+        width: 39.453125%;
+        margin-right: 41px;
+    }
+}
+
+/* Media Query for Desktop */
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .main-header {
+        padding: 20px 0;
+    }
+
+    .site-logo {
+        padding: 7px 0 6.37px 0;
+        width: 15%;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-bar {
+        display: block;
+        width: 85%;
+        position: unset;
+    }
+
+    .nav-items {
+        width: 75%;
+    }
+
+    .btn-primary {
+        width: 10%;
+    }
+
+    .nav-bar ul li {
+        list-style-type: none;
+        padding-right: 30px;
+        font-size: 13px;
+        line-height: 15px;
+        display: inline-block;
+    }
+
+    .nav-items i {
+        padding-left: 3px;
+    }
+
+    .nav-bar .btn-primary {
+        padding: 14px 25px 14.37px 25px;
+        background: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
+        border-radius: 5px;
+        border: linear-gradient(90deg, #3AE4DF 0%, #7A88FF 104.29%);
+        color: #ffffff;
+    }
+
+    /* Introduction */
+    .medium-view {
+        display: none;
+    }
+
+    .larger-view {
+        display: block;
+    }
+
+    .intro-container-left {
+        padding: 172px 0 171px 165px;
+    }
+
+    .intro-container-right {
+        padding: 45px 109px 47.53px 0;
+    }
+
+    .intro-btn-primary {
+        padding: 19px 56px;
+        background: #798BFE;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+
+    /* Footer */
+
+    .footer-heading {
+        width: 20%;
+        float: left;
+    }
+
+    .footer-heading .social {
+        display: none;
+    } 
+
+    .footer-bottom .social {
+        display: block;
+    }
+
+    .heading-title i {
+        display: none;
+    }
+
+    .line1 {
+        display: block;
+        margin: 25px 0 14px 0;
+    }
+
+    .line3 {
+        display: none;
+    }
+
+    .footer-top {
+        margin-top: 100px;
+    } 
+
+    /* Executive Message */
+    .message-container-left  {
+        padding: 17px 5.3px 20.61px 49px;
+    }
+
+    /* .message-container-wrapper {
+        margin: 110px 227px 110px 165px;
+    }  */
+
+    .message-container {
+        padding-top: 110px;
+    }
+
+    .intro-heading {
+        margin-top: 54px;
+        padding-right: 48px;
+        padding-left: 136px;
+    } 
+
+    .message-container-right {
+        padding-left: 136px;
+    }
+
+
+    /* Upcoming Trending */
+    .trending {
+        padding: 89.39px 165px 0 165px;
+    }
+
+    .trending-col {
+        width: 21.75%;
+        margin-right: 22px;
+    }
+
+    .trending-col h1{
+        font-size: 18px;
+    }
+
+    .trending-col .btn-upcoming {
+        margin-top: 20px;
+        margin-bottom: 36px;
+        padding: 12px 14px 11px 15px;
+    
+        font-size: 14px;
+        line-height: 16px;
+        background: #798BFE;
+        border: #798BFE;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+    
+}
