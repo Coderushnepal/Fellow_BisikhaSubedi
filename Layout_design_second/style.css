@@ -56,6 +56,11 @@ body {
     position: relative;
 }
 
+.hamburger:hover .nav-menus {
+    display: block;
+    position: absolute;
+}
+
 .nav-bar {
     width: 65%;
 }
@@ -648,6 +653,7 @@ body {
 
     .one-type-image img{
         width: 100%;
+        text-align: center;
     }
 
     /* Variable Fonts */
@@ -928,6 +934,10 @@ body {
         font-size: 450;
     }
 
+    .rethink-progress {
+        padding: 0 344px;
+    }
+
     .progress-text{
         width: 90%; 
         margin: 0 auto;
@@ -972,6 +982,10 @@ body {
     /* Pricing */
     .pricing-inner {
         padding: 100px 200.5px;
+    }
+
+    .pricing-description h1 {
+        padding-left: 20px;
     }
 
     .pricing-description p {
