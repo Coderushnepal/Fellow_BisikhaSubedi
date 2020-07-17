@@ -1,0 +1,980 @@
+@font-face {
+    font-family: "Circular Std";
+    src: url(".\fonts\Circular Std Black.ttf");
+    src:
+    url("./fonts/Circular\ Std\ Black.ttf") format("ttf"),
+    url("./fonts/Circular_Std_Black.ttf") format("ttf"),
+}
+
+/* To remove any default browser properties */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+/* Setting the default font-family and font-size for the entire site */
+body {
+    font-family: 'Circular Std';
+    font-size: 22px;
+}
+
+/* Clearing the floats */
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+/* Floating the lefts and rights */
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    width: 100%; /*Setting the width in % foe responsive site*/
+    margin: 0 auto; /* To center the content to the center of container from left and right */
+    padding: 0 20px;  /* Container ko vitta ma content nataseyos, instead leave 20px from left and right */
+}
+
+/* 1. Header */
+.header {
+     background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 7.62%, rgba(0, 225, 198, 0.06) 25.5%, #FFFFFF 70.92%);
+}
+
+.site-logo {
+    width: 35%;
+}
+
+.navigation {
+    margin: 30px 51px 0 51px;
+    position: relative;
+}
+
+.nav-bar {
+    width: 65%;
+}
+
+.nav-menus {
+    width: 85%;
+    display: none;
+}
+
+.nav-btn {
+    width: 15%;
+    display: none;
+}
+
+.hamburger {
+    width: 15%;
+    display: block;
+    margin-top: 20px;
+}
+
+.hamburger:hover .nav-menus {
+    position: absolute;
+    display: block;
+}
+
+.hamburger-menu {
+    width: 30px;
+    border: 1px solid #000000;
+    margin-bottom: 7px;
+}
+
+.button-tablet {
+    display: none;
+}
+/* Header */
+
+/* Confitti */
+
+.confitti-background {
+    background-image: url("./images/shapes.png");
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 7.62%, rgba(0, 225, 198, 0.06) 25.5%, #FFFFFF 70.92%); */
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+    /* margin-top: 45px; */
+}
+
+.confetti-content {
+    margin-top: 45px;
+}
+
+.confetti-heading {
+    margin: 39px 40px 0 40px;
+    text-align: center;
+}
+
+.confetti-text {
+    margin: 17px 28px 0 28px;
+    text-align: center;
+}
+
+.confetti-button {
+    margin: 45px 94.5px 0 94.5px;
+    text-align: center;
+}
+
+.confetti-button-1 {
+    background: #00B6F0;
+    border: #00B6F0;
+    border-radius: 85px;
+    font-size: 18px;
+    /* line-height: 20px; */
+    padding: 16px 20px;
+    color: #ffffff;
+}
+
+.confetti-button-2 {
+    background: #caa1a1;
+    border: #FFFFFF;
+    border-radius: 85px;
+    padding: 16px 20px;
+    color: #ffffff;
+    font-size: 18px;
+    /* line-height: 20px; */
+}
+
+/* Screen */
+
+.confetti-screen-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 45px;
+}
+
+.confetti-screen-container img{
+    width: 80%;
+}
+
+/* Light CTA */
+.light-cta-content {
+    margin: 50px 80px;
+    text-align: center;
+}
+
+.light-cta-content span{
+    color: #F3CD03;
+    font-weight: 450;
+    font-size: 36px;
+}
+
+.light-cta-content h1{
+    padding: 17px 0px;
+    font-weight: bold;
+    font-size: 56px;
+    /* line-height: 65px; */
+    color: #20262A;
+}
+
+.light-cta-content p {
+    font-weight: 450;
+    font-size: 24px;
+    /* line-height: 38px; */
+    margin: 0px 40px;
+}
+
+.light-cta-button {
+    margin-top: 59px;
+}
+
+.light-cta-button .cta-btn-1 {
+    padding: 10px 40px;
+    background: #00B6F0;
+    border-radius: 85px;
+    color: #ffffff;
+    border: 1px solid #00B6F0;
+} 
+
+.light-cta-button .cta-btn-2 {
+    padding: 10px 40px;
+    background: #ffffff;
+    border-radius: 85px;
+    border: 1px solid #00B6F0;
+    color: #00B6F0;
+} 
+
+/* open type */
+/* Write CSS for background image here */
+.one-type-content , .one-type-text , .one-type-image{
+    width: 100%;
+}
+
+.one-type {
+    /* position: relative;  */
+    padding-top: 30px;
+    /* height: auto; */
+}
+
+/* .one-type img{
+    position: absolute;
+    height: auto;
+} */
+
+.one-type-text {
+    text-align: center;
+    /* position: absolute; */
+}
+
+.one-type-text h1{
+    font-weight: 450;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.one-type-text p {
+    font-weight: 450;
+    font-size: 24px;
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
+
+.one-type-text a {
+    font-weight: 450;
+    font-size: 18px;
+    margin-top: 7px;
+    color: #00B6F0;
+    padding: 10px;
+}
+
+/* Variable Font */
+
+/* For background image */
+
+/* For background image */
+
+.variable-font-text , .variable-font-image {
+    width: 100%;
+    text-align: center;
+}
+
+.variable-font-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.variable-font-text p {
+    font-weight: 450;
+    font-size: 24px;
+    margin-top: 17px;
+    margin-bottom: 17px;
+}
+
+.variable-font-text a {
+    font-weight: 450;
+    font-size: 18px;
+    margin-top: 7px;
+    color: #00B6F0;
+    padding: 10px;
+}
+
+/* Progress Bar */
+.rethink {
+    margin: 30px 0 20px 0;
+}
+
+.rethink-content {
+    text-align: center;
+}
+
+.rethink-content p {
+    margin-top: 15px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #5C5C5C;
+    font-style: normal;
+    font-size: 450;
+}
+
+.bar {
+    width: 50%;
+    float:left;
+    min-width:1%;
+    height:100%;
+    background:cornflowerblue;
+}
+
+.rethink-progressbar {
+    margin:20px auto 10px;
+    padding:0;
+    width:90%;
+    height:10px;
+    overflow:hidden;
+    background:#e5e5e5;
+    border-radius:30px;
+}
+
+.progress-text{
+    width: 90%; 
+    margin: 0 auto;
+}
+
+.progress-text span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;    
+    color: #505D6F;
+}
+.progress-btn {
+    margin: 50px auto 20px auto;
+    width: 100%;
+    position: relative;
+}
+
+.progress-btn {
+    text-align: center;
+}
+
+.progress-btn .progress-btn-primary{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    color: #FFFFFF;
+    background: #00B6F0;
+    border-radius: 50px;
+    border: 0;
+    padding: 10px 20px;
+}
+
+.rethink-content h1 {
+    margin-top: 15px;
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: 0.2px;
+}
+
+/* Pricing */
+.pricing {
+    background: #182333;
+}
+
+.pricing-heading , .pricing-description {
+    width: 100%;
+    text-align: center;
+}
+
+.pricing-heading h1 {
+    color: #ffffff;
+}
+
+.pricing-heading p {
+    color: #ffffff;
+}
+
+.pricing-description h1{
+    color: #ffffff;
+}
+
+.pricing-description p{
+    color: #ffffff;
+}
+
+.pricing-cost {
+    font-weight: 900;
+    font-size: 72px;
+    color: #F3CD03;
+}
+
+.pricing-img-details {
+    color: #ffffff;
+}
+
+.pricing-description .pricing-btn {
+    color: #ffffff;
+    background: #00B6F0;
+    border-radius: 85px;
+    padding: 10px 38px;
+    border: 1px solid #00B6F0;
+}
+
+.pricing-heading {
+    padding: 35px;
+}
+
+.pricing-image {
+    width: 100%;
+}
+
+.pricing-cost {
+    width: 50%;
+    text-align: right;
+}
+
+.pricing-img-details {
+    width: 50%;
+    text-align: left;
+    margin-top: 40px;
+    padding-left: 7px;
+}
+
+.pricing-btn {
+    margin-top: 20px;
+}
+
+.pricing-description h1 {
+    font-size: 18px;
+}
+
+.pricing-btn {
+    margin-bottom: 35px;
+}
+
+/* Testimonial */
+.testimonial {
+    margin-top: 50px;
+}
+
+.testimonial h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #20262A;
+}
+
+.testimonial-brands {
+    width: 100%;
+    text-align: center;
+    padding: 19px 0px;
+}
+
+.testimonial p {
+    text-align: center;
+    font-size: 19px;
+    /* padding: 0 366px; */
+}
+
+.testiminial-author {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.author-image {
+    width: 50%;
+    text-align: right;
+}
+
+.author-description {
+    width: 50%;
+    padding-left: 15px;
+}
+
+.author-name , .author-designation {
+    font-size: 18px;
+}
+
+.testimonial-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.testimonal-button {
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #FFFFFF;
+    background: #00B6F0;
+    border-radius: 85px;
+    padding: 10px 25px;
+    border: 1px solid #00B6F0;
+}
+
+/* Ergonomic */
+.ergonomic-meeting, .ergonomic-description {
+    width: 100%;
+}
+
+.ergonomic-meeting {
+    background: linear-gradient(180deg, #E9FAFF 0%, rgba(233, 250, 255, 0) 100%);
+}
+
+.ergonomic-inner {
+    margin-top: 50px;
+}
+
+.ergonomic-heading {
+    width: 100%;
+}
+
+.ergonomic-heading h1{
+    width: 100%;
+    text-align: center;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.ergonomic-description p {
+    width: 100%;
+    font-size: 19px;
+    text-align: center;
+}
+
+.ergonomic-button {
+    text-align: center;
+}
+
+.ergonomic-button .ergonomic-btn {
+    margin-top: 50px;
+    padding: 10px 25px;
+    background: #00B6F0;
+    border-radius: 85px;
+    color: #ffffff;
+    border: 1px solid;
+}
+
+/* Footer */
+.footer-inner, .footer-logo, .footer-nav , .footer-social-links{
+    width: 100%;
+    text-align: center;
+}
+
+.footer-inner {
+    margin-top: 50px;
+}
+
+.footer-nav, .footer-social-links{
+    margin-top: 20px;
+}
+
+.footer-nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.footer-nav li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+}
+
+/* Media Queries */
+
+/* For Tablet */
+@media screen and (min-width: 768px) {
+
+    .container {
+        max-width: 750px;
+    }
+
+    /* Header */
+    .site-logo {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-bar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menus {
+        width: 100%;
+        display: block;
+    }
+
+    .nav-menus li {
+        padding-right: 20px;
+    }
+    
+    .nav-btn {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-bar li {
+        list-style-type: none;
+        display: inline-block;
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .nav-bar li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .nav-menus .nav-menu-btn {
+        display: none;
+    }
+
+    .button-tablet {
+        display: block;
+        width: 100%;
+        text-align: center;      
+    }
+
+    .button-tablet .btn-tablet{
+        background-color: #ffffff;
+        border-radius: 85px;
+        color: #00B6F0;
+        border: 1px solid #00B6F0;
+        padding: 12px 30px;
+        margin-top: 15px;
+    }
+    /* Header */
+
+    /* One type */
+    .one-type-text , .one-type-image{
+        width: 50%;
+    }
+    
+    .one-type-text {
+        text-align: left;
+        padding: 50px 20px 10px 20px;
+    }
+    
+    .one-type-text h1 {
+        font-size: 36px;
+    }
+
+    .one-type-text p {
+        margin-top: 19px;
+        margin-bottom: 19px;
+        font-size: 20px;
+    }
+
+    .one-type-image img{
+        width: 100%;
+    }
+
+    /* Variable Fonts */
+
+    .variable-font-text , .variable-font-image {
+        width: 50%;
+    }
+
+    .variable-font-content {
+        margin-top: 20px;
+    }
+
+    .variable-font-image {
+        float: left;
+    }
+
+    .variable-font-text {
+        float: right;
+        text-align: left;
+        margin-top: 35px;
+    }
+
+    .variable-font-text p{
+        font-size: 20px;
+    }
+
+    .variable-font-image img {
+        width: 100%;
+    }
+
+    /* Progress Bar */
+
+    .rethink {
+        margin: 60px 0 20px 0;
+    }
+
+    .rethink-content h1 {
+        margin-top: 15px;
+        font-size: 35px;
+        letter-spacing: 0.2px;
+    }
+
+    .rethink-content p {
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #5C5C5C;
+        font-style: normal;
+        font-size: 450;
+    }
+
+    .progress-text{
+        width: 90%; 
+        margin: 0 auto;
+    }
+
+    .progress-text span {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;    
+        color: #505D6F;
+    }
+
+    .progress-btn {
+        margin: 65px auto 20px auto;
+        width: 100%;
+    }
+
+    /* Pricing */
+    .pricing-heading , .pricing-description {
+        width: 50%;
+    }
+
+    .pricing-inner {
+        padding: 50px;
+    }
+
+    .pricing-heading {
+        padding: 0;
+        text-align: left;
+    }
+
+    .pricing-heading h1{
+        margin-bottom: 10px;
+    }
+
+    .pricing-cost {
+        width: 50%;
+        text-align: right;
+        padding-right: 30px;
+        font-size: 43px;
+    }
+
+    .pricing-img-details {
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+
+    .pricing-description p {
+        text-align: left;
+        padding-left: 81px;
+    }
+
+    .pricing-image {
+        margin-bottom: 10px;
+    }
+
+    /* Ergonomic */
+
+    .ergonomic-inner  {
+        width: 100%;
+        padding: 50px;
+        margin-top: 50px;
+    }
+
+    .ergonomic-heading {
+        width: 50%;
+    }
+
+    .ergonomic-heading h1 {
+        /* margin-top: 20px; */
+        text-align: left;
+        font-size: 36px;
+        margin-top: 0px;
+        padding-left: 10px;
+    }
+
+    .ergonomic-description p {
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .ergonomic-description {
+        width: 50%;
+    }
+
+    .ergonomic-button {
+        text-align: left;
+    }
+
+    /* Footer */
+    .footer-logo , .footer-nav {
+        width: 50%;
+    }
+
+    .footer-inner {
+        margin-top: 20px;
+    }
+}
+
+/* For Desktop */
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 1400px;
+    }
+
+    /* Header */
+    .site-logo {
+        width: 35%;
+        margin: 20px 0 21px 30px;
+    }
+    
+    .nav-bar {
+        width: 60%;
+    }
+    
+    .nav-menus {
+        width: 80%;
+        margin: 45px 0 34px 0;
+        display: block;
+    }
+
+    .nav-menus li {
+        font-weight: 450;
+        font-size: 18px;
+        /* line-height: 20px; */
+        font-family: 'Varela Round', sans-serif;
+    }
+
+    .nav-menus .nav-menu-btn {
+        display: none;
+    }
+    
+    .nav-btn {
+        width: 15%;
+        display: block;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-btn {
+        display: block;
+        margin: 33px 10px 34px 0;
+    }
+
+    .nav-btn .btn-primary{
+        border-radius: 85px;
+        color: #00B6F0;
+        border: 1px solid #00B6F0;
+        padding: 12px 30px;
+        background-color: #ffffff;
+    }
+
+    .button-tablet {
+        display: none;
+    }
+
+    .confetti-button-1 , .confetti-button-2  {
+        padding: 20px 36px;
+    }
+
+    /* Header */
+
+    /* Light CTA */
+    .light-cta-content p{
+        margin: 0px 230px;
+    }
+    
+    .light-cta-button .cta-btn-1 {
+        padding: 20px 40px;
+    } 
+
+    .light-cta-button .cta-btn-2 {
+        padding: 20px 40px;
+    } 
+
+    /* One Type */
+    .one-type-text {
+        padding: 47px 50px 47px 0;
+    }
+
+    .one-type-image img{
+        width: 100%;
+    }
+
+    .one-type-content {
+        padding: 100px 118.5px 100px 118.5px;
+    }
+
+    /* Variable Font */
+    .variable-font-content {
+        margin: 100px 158px;
+    }
+
+    /* Progress Bar */
+
+    .rethink {
+        margin: 60px 0 60px 0;
+    }
+
+    .rethink-content h2 {
+        margin-top: 27px;
+        font-size: 56px;
+        line-height: 65px;
+        letter-spacing: 0.2px;
+    }
+
+    .rethink-content p {
+        margin-top: 27px;
+        font-size: 16px;
+        line-height: 25px;
+        color: #5C5C5C;
+        font-style: normal;
+        font-size: 450;
+    }
+
+    .progress-text{
+        width: 90%; 
+        margin: 0 auto;
+    }
+    .progress-text span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;    
+    color: #505D6F;
+    }
+    .progress-btn {
+        margin: 72px auto 20px auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .progress-btn .btn-primary{
+        /* position:absolute; */
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%); 
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.1px;
+        color: #FFFFFF;
+        background: #00B6F0;
+        border-radius: 50px;
+        border: 0;
+        padding: 15px 30px;
+    } 
+
+    /* Pricing */
+    .pricing-inner {
+        padding: 100px 200.5px;
+    }
+
+    .pricing-description p {
+        padding-left: 115px;
+    }
+
+    /* Ergonomic */
+    .ergonomic-inner  {
+        padding: 50px 147.5px;
+    }
+
+    /* Footer */
+    .footer-logo, .footer-nav, .footer-social-links {
+        width: 33.33333%;
+    }
+
+    .footer-logo p {
+        font-size: 18px;
+    }
+}
+
+
+
