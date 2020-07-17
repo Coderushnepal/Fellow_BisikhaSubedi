@@ -43,8 +43,12 @@ body {
 }
 
 /* 1. Header */
-.header {
-     background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 7.62%, rgba(0, 225, 198, 0.06) 25.5%, #FFFFFF 70.92%);
+/* .header {
+     
+} */
+
+.linear-gradient-div {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.22) 7.62%, rgba(0, 225, 198, 0.06) 25.5%, #FFFFFF 70.92%);
 }
 
 .site-logo {
@@ -76,6 +80,7 @@ body {
 }
 
 .hamburger {
+    /* position: absolute; */
     width: 15%;
     display: block;
     margin-top: 20px;
