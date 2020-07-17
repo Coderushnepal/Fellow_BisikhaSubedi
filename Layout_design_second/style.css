@@ -499,13 +499,17 @@ body {
 }
 
 /* Ergonomic */
+.ergonomic-main {
+    background: linear-gradient(180deg, #E9FAFF 0%, rgba(233, 250, 255, 0) 100%);
+}
+
 .ergonomic-meeting, .ergonomic-description {
     width: 100%;
 }
 
-.ergonomic-meeting {
-    background: linear-gradient(180deg, #E9FAFF 0%, rgba(233, 250, 255, 0) 100%);
-}
+/* .ergonomic-meeting {
+    
+} */
 
 .ergonomic-inner {
     margin-top: 50px;
