@@ -6,6 +6,8 @@ var showPassword = document.getElementById('show-password');
 var clickResponse = function(e) {
     if (password.getAttribute('type') == "password") {
         password.setAttribute('type', 'text');
+    } else {
+        password.setAttribute('type', "password");
     }
 }
 
