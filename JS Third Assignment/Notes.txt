@@ -1,0 +1,77 @@
+1. Creating Random Co-ordinates
+
+var coordinates = function () {
+  function randomX() {
+  }
+  function randomY() {
+  }
+  return {
+    x: randomX(),
+    y: randomY(),
+  };
+};
+
+2. 
+// DOM -> tree structure of HTML
+// document -> whole page
+// document.body -> body of that page
+// element/DOM -> type object
+// accessing an element in DOM
+// document -> find by Id (find by classnames, find by tags, find by names)
+
+3.
+var box = document.getElementById("box");
+console.log(box);
+box.setAttribute("class", "bg-color_red");
+var box1 = document.getElementById("box1");
+var box2 = document.getElementById("box2");
+console.log(box1.clientHeight);
+console.log(box1.clientWidth);
+box1.style.width = box1.clientWidth * 2 + "px";
+box1.style.height = box1.clientHeight * 2 + "px";
+
+4.
+box1.style.borderRadius = "50%";
+console.log(box1.classList);
+box1.classList.remove("abc");
+box1.classList.remove("xyz");
+box1.classList.add("yello");
+box1.classList.remove("bg-color_green");
+box1.classList.add("bg-color_red");
+camelcased
+
+
+// css
+border-radius
+background-color
+width
+height
+
+
+// js
+borderRadius
+backgroundColor
+width height
+// create h1 tag
+var h1 = document.createElement("h1");
+// create div
+var div = document.createElement("div");
+// create link
+var a = document.createElement("a");
+var btn = document.createElement("button");
+
+
+// setting up a tag
+a.innerHTML = "click me";
+a.setAttribute("href", "www.google.com");
+
+
+// setting up div
+div.style.width = "100px";
+div.style.height = "100px";
+div.classList.add("bg-color_red");
+// adding everything to document (DOM)
+// body -> div -> h1 -> a
+h1.appendChild(a);
+div.appendChild(h1);
+document.body.appendChild(div);
