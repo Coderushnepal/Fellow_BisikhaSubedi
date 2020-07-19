@@ -142,6 +142,10 @@ body {
     color: #ffffff;
 }
 
+.confetti-button-1:hover{
+    background: rgb(103, 159, 241);
+}
+
 .confetti-button-2 {
     background: #caa1a1;
     border: #FFFFFF;

@@ -4,6 +4,14 @@ const frame = document.getElementById('frame');
 const height = frame.clientHeight;
 const width = frame.clientWidth;
 
+// const check = window.pageXOffset
+let coords = frame.getBoundingClientRect();
+let leftt = frame.left;
+console.log(leftt);
+
+// console.log(height, width);
+// const topFrame = frame
+// const bottomFrame = 
 const margin = window.innerHeight - height;
 
 btn.onclick = function(e) {
@@ -34,19 +42,4 @@ btn.onclick = function(e) {
             clearInterval(interval);
         })
     };
-
-// ball.addEventListener("click", function () {
-//   interval = setInterval(function () {
-//     var currentTop = ball.style.top;
-//     var nextTop = parseInt(currentTop) + 10 * direction;
-//     ball.style.top = nextTop + "px";
-//     if (nextTop >= 750 || nextTop <= 100) {
-//       direction *= -1;
-//     }
-//   }, 10000 / 60);
-// });
-// var btn = document.getElementById("btn");
-// btn.addEventListener("click", function () {
-//   clearInterval(interval);
-// });
 

@@ -54,5 +54,18 @@ function find(char) {
 }
 
 // Q2 answer
-find('s');
-find('a');
+// find('s');
+// find('a');
+
+
+// Q3. Convert the array of the result in Question 1, in following format
+// Kunai pani array ko form nai purai change gardeenchha reduce lay
+// Map ra filter lay chain array lai modify garchha but reduce lay form nai change garna sakchha
+// reduce ma sadhai return garda ekota value aauchha
+
+var formatted = finalarray.reduce(function (accumulator, value, index, src){
+    return value;
+}, {});
+
+// console.log(value);
+
