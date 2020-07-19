@@ -4,9 +4,6 @@ const frame = document.getElementById('frame');
 const frameHeight = frame.clientHeight;
 const frameWidth = frame.clientWidth;
 
-// const excludedHeight = window.innerHeight - frameHeight;
-// const excludedWidth = window.innerWidth - frameWidth;
-
 // every time button click garda, naya div element banna paryo joslai border radius deyera circle jasto dekhaunay
 // ball lai frame ma append gardeenay
 // ball ko click event ma, ball ekota direction ma move huna paryo
@@ -40,10 +37,18 @@ button.onclick = function(e){
 
     var interval;
     var direction = 1;
+    var ballHeight = ball.clientHeight;
 
     ball.addEventListener("click" , function() {
+        ball.style.backgroundColor = 'black';
         interval = setInterval(function() {
-            var current
+            var currentTop = ball.style.top;
+            var nextTop = parseInt(currentTop) + 10 * direction;
+            ball.style.top = nextTop + 'px';
+
+            if(nextTop >= (frameHeight - ballHeight) || nextTop < 0) {
+                direction *= -1;
+            } 
         }, 10000/60)
     });
 };
