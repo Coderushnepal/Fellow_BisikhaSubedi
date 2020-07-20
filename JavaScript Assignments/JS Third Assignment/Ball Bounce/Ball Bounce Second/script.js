@@ -39,16 +39,26 @@ button.onclick = function(e){
     var direction = 1;
     var ballHeight = ball.clientHeight;
 
-    ball.addEventListener("click" , function() {
-        ball.style.backgroundColor = 'black';
-        interval = setInterval(function() {
-            var currentTop = ball.style.top;
-            var nextTop = parseInt(currentTop) + 10 * direction;
-            ball.style.top = nextTop + 'px';
+    interval = setInterval(function() {
+        var currentTop = ball.style.top;
+        var nextTop = parseInt(currentTop) + 10 * direction;
+        ball.style.top = nextTop + 'px';
 
-            if(nextTop >= (frameHeight - ballHeight) || nextTop < 0) {
-                direction *= -1;
-            } 
-        }, 10000/60)
-    });
+        if(nextTop >= (frameHeight - ballHeight) || nextTop < 0) {
+            direction *= -1;
+        } 
+    }, 1000/60)
 };
+
+    // ball.addEventListener("click" , function() {
+    //     ball.style.backgroundColor = 'black';
+    //     interval = setInterval(function() {
+    //         var currentTop = ball.style.top;
+    //         var nextTop = parseInt(currentTop) + 10 * direction;
+    //         ball.style.top = nextTop + 'px';
+
+    //         if(nextTop >= (frameHeight - ballHeight) || nextTop < 0) {
+    //             direction *= -1;
+    //         } 
+    //     }, 1000/60)
+    // });

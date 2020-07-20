@@ -1,0 +1,12 @@
+Initial 
+    -> There is a defined number of balls on the top of the window
+    -> Each ball has its own styling including background color, height, width
+
+Onclick
+    -> When the balls are clicked, it's deleted except on the top of the window. 
+       There is no click event for the balls that is at the top of the window
+
+Interval
+
+    -> Each ball has its own interval to fall. 
+    
