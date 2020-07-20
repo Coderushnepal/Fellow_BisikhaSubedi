@@ -1,6 +1,12 @@
 Initial 
     -> There is a defined number of balls on the top of the window
     -> Each ball has its own styling including background color, height, width
+    -> There is no vertical scrolpane so the ball has to be deleted when it exceeds the window height
+    -> Balls on the left side are calculated and adjusted with its own width so they appear complelete unlike on the
+       right side. On the right side, the ball do not appear complete and thus, the width on the right side is not  considered
+
+    -> There is the increment of the number of balls falling with respect to time. i.e, when the window is loaded, the 
+       number of balls falling immediately is less and the number increases when the interval increase.
 
 Onclick
     -> When the balls are clicked, it's deleted except on the top of the window. 
@@ -9,4 +15,3 @@ Onclick
 Interval
 
     -> Each ball has its own interval to fall. 
-    
