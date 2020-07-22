@@ -2,6 +2,9 @@
 
 function createBall() {
     var that = this;
+    this.canbedeleted = false;
+    this.delete = false;
+
     this.create = function() {
         this.ball = document.createElement('div');
 
@@ -38,11 +41,25 @@ function createBall() {
 
     // Function for the fall of balls
     this.direction = function() {
-        setInterval(function(){
+        this.canbedeleted = true;
+        this.interval = setInterval(function(){
             var currentTop = that.ball.style.top;
-            var nextTop = parseInt(currentTop) + (Math.floor(Math.random()) * 1);
-            // console.log(nextTop);
+            var nextTop = parseInt(currentTop) + (Math.random() * 8);
             that.ball.style.top = nextTop + 'px';
         }, 1000/60);
     };
+
+    // Remove on Click
+    // this.ball.addEventListener('click' , function() {
+    //     // console.log(this.ball);
+    //     // if (that.canbedeleted) {
+    //     //     // that.remove();
+    //     // }
+    // });
+
+    // this.remove = function() {
+    //     document.body.removeChild(this.ball);
+    //     clearInterval(interval);
+    //     this.delete = true;
+    // }
 }
