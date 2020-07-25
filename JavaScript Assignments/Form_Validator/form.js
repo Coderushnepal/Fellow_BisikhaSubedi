@@ -1,80 +1,124 @@
+// Array of objects containing the elements inside the form
+var formAttributes = [
+    {
+        label: "User Name",
+        name : "fullName",
+        type : "text",
+        placeholder : "Enter username",
+        error: "Username must be at least 3 characters"
+    },
+    {
+        label: "Email",
+        name : "email",
+        type : "email",
+        placeholder : "Enter email",
+        error: "Email is not valid"
+    },
+    {
+        label: "Password",
+        name : "password",
+        type : "password",
+        placeholder : "Enter password",
+        error: "Password must be atleast 6 characters"
+    },
+    {
+        label: "Confirm Password",
+        name : "confirmpassword",
+        type : "password",
+        placeholder : "Enter password again",
+        error: "Password2 is required"
+    }
+]   
+
 function Form() {
+    this.createFormContainer = function(container) {
+        this.form = document.createElement('form');
+        this.form.classList.add('form');
+        container.append(this.form);
+    };
 
-    var that = this;
+    this.createForm = function(value, index) {
+        var label = document.createElement('label');
+        label.id = index + 1;
+        label.for = value.name;
+        label.innerHTML = value.label;
 
-    // Setting the properties of the form
-    this.form = document.createElement('form');
-    this.form.name = 'js_form';
-    this.form.method = 'POST';
-    this.form.action = 'validator.js';
+        // label styling
+        label.style.display = "inline-block";
+        label.style.width = "100%";
 
-    // console.log(this.form);
+        this.form.appendChild(label);
 
-    this.formAttributes = [
-        {
-            label: "User Name",
-            name : "fullName",
-            type : "text",
-            placeholder : "Enter username",
-            error: "Username must be at least 3 characters"
-        },
-        {
-            label: "Email",
-            name : "email",
-            type : "text",
-            placeholder : "Enter email",
-            error: "Email is not valid"
-        },
-        {
-            label: "Password",
-            name : "password",
-            type : "password",
-            placeholder : "Enter password",
-            error: "Password must be atleast 6 characters"
-        },
-        {
-            label: "Confirm Password",
-            name : "confirmpassword",
-            type : "password",
-            placeholder : "Enter password again",
-            error: "Password2 is required"
-        }
-    ]   
+        input = document.createElement('input');
+		input.classList.add('input');
+        input.id = value.name;
 
-    // console.log(this.formAttributes );
+        input.setAttribute('type' , value.type);
+        input.setAttribute('name' , value.name);
+        input.setAttribute('placeholder' , value.placeholder);
 
-    this.formAttributes.forEach(function(value){
-        this.input = document.createElement("input");
-        // setting input attirbutes 
-        this.input.name = value.name;
-        this.input.type = value.type;
-        this.input.placeholder = value.placeholder;  
-        // this.form.appendChild(this.input);  
-        // console.log(input);
+        // Styling input
+        input.style.display = 'block';
+        input.style.margin = '5px 0px';
+        input.style.width = '100%';
+        input.style.padding = '7px 10px';
+        input.style.border = '1px solid #000000';
+
+        this.form.appendChild(input);
+
+        var errorDiv = document.createElement('div');
+        errorDiv.id = value.name +'-'+ 'error';
+        errorDiv.classList.add('errorBox' , 'hidden');
+        errorDiv.innerHTML = value.error;
+
+        // Styling errordiv
+        errorDiv.style.margin = "10px 0px"
+
+        this.form.appendChild(errorDiv);
+    }
+
+    this.createSubmitButton = function() {
+        var button = document.createElement('button');
+        button.type = 'submit';
+        button.name = 'submit';
+        button.id = 'submit-btn';
+        button.innerHTML = "Submit";
+
+        button.style.margin = '30px 0px';
+        button.style.width = '100%';
+        button.style.color = 'white';
+        button.style.padding = '10px 0px';
+        button.style.backgroundColor = 'rgb(7, 138, 253)';
         
-        // setting input labels
-        this.Label = document.createElement("label");
-        this.Label.innerHTML = value.label;
-        // console.log(Label.innerHTML);
 
-
-        // error messages
-        this.errorMessage = document.createElement("div");
-        this.errorMessage.id = input.label;
-        this.errorMessage.innerHTML = value.error; 
-        // console.log(this.errorMessage);
-    });
-
-    this.validatebutton = document.createElement("button");
-    this.validatebutton.style.padding = "10px 20px";
-    this.validatebutton.style.backgroundColor = "blue";
-
-    this.validatebutton.addEventListener('click' , function(){
-        that.validator();
-    })
-    
+        this.form.appendChild(button);
+    };
    
 }
+
+// Form
+var container = document.createElement('div');
+container.classList.add('container');
+document.body.appendChild(container);
+
+// styling the form
+container.style.position = 'absolute';
+container.style.top = '100px';
+container.style.left = '400px';
+container.style.border = '1px solid #000000';
+container.style.padding = '30px';
+
+// Form Title
+var title = document.createElement('h1');
+title.innerHTML = "Register with us";
+container.appendChild(title);
+
+// Form
 var form = new Form();
-// document.body.appendChild(this.form);
-// form.append(input);
+form.createFormContainer(container);
+formAttributes.forEach(function(value,index){
+    // console.log(value, index);
+    form.createForm(value, index);
+});
+
+form.createSubmitButton();

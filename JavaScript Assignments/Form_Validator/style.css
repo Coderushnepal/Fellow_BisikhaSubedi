@@ -1,0 +1,22 @@
+.errorBox {
+	/* visibility: hidden; */
+	font-size: 12px;
+	margin-bottom: 10px;
+	color: #d8000c;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+.valid {
+	border: 2px solid #dff2bf;
+}
+
+.invalid {
+	border: 2px solid #d8000c;
+}
