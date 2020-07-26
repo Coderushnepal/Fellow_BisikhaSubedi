@@ -18,9 +18,10 @@ var submitBtn = document.getElementById('submit-btn');
 
 
 submitBtn.addEventListener('click' , function(event) {
-    // console.log('Button Clicked');
+    // console.log('Helloo');
     var isFormValid = validateFunction(event);
-    if (!isFormValid) {
+    // console.log(isFormValid);
+    if ( ! isFormValid ) {
         event.preventDefault();
     }
 });
@@ -41,12 +42,11 @@ function Validate() {
     };
 
     this.isPassword2Valid = function(value, pwd1) {
-        return result = value ===pw1 && value !== '' ? true : false;
+        return result = value ===password && value !== '' ? true : false;
     }
 }
 
 validate = new Validate();
-var validateFunction;
 
 var validateFunction = function(event) {
     if (validate.isUsernameValid(fullName.value)) {

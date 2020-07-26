@@ -18,5 +18,5 @@
 }
 
 .invalid {
-	border: 2px solid #d8000c;
+	border: 2px solid #d8000c !important;
 }

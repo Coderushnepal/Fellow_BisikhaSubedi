@@ -84,7 +84,7 @@ function Form() {
         button.id = 'submit-btn';
         button.innerHTML = "Submit";
 
-        button.style.margin = '30px 0px';
+        button.style.margin = '20px 0 0 0';
         button.style.width = '100%';
         button.style.color = 'white';
         button.style.padding = '10px 0px';
@@ -103,10 +103,10 @@ document.body.appendChild(container);
 
 // styling the form
 container.style.position = 'absolute';
-container.style.top = '100px';
+container.style.top = '50px';
 container.style.left = '400px';
 container.style.border = '1px solid #000000';
-container.style.padding = '30px';
+container.style.padding = '30px 50px';
 
 // Form Title
 var title = document.createElement('h1');
