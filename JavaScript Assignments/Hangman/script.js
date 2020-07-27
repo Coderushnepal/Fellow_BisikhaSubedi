@@ -22,15 +22,44 @@ titleDiv.appendChild(subHeading);
 // Fetch the name of fellows
 var fellows = nameList.split('\n');
 var randomFellow = fellows[Math.floor(Math.random() * fellows.length)].toLowerCase();
+var randomFellowName = randomFellow.split(''); //yesma fellow ko name in letters aairakochha
 
+console.log(randomFellowName);  
 var letterCount = function() {
-    var randomFellowName = randomFellow.split('');
-    
     for( var i=0; i < randomFellowName.length; i++ ) {
         var newDiv = document.createElement('div');
-        newDiv.id = randomFellowName[i];
-        document.body.appendChild(newDiv);
+        newDiv.classList.add('letter');
+        var divisions = document.getElementById('letter-container');
+        divisions.appendChild(newDiv);
     }
 }
 
+var figureParts = document.getElementsByClassName('figure-part');
+window.onload = function() {
+   Array.from(figureParts).forEach((value) => {
+        value.style.visibility = 'hidden';
+   });
+};
+
 letterCount();
+
+
+
+// document.addEventListener ('keypress' , function(event){
+//     // console.log(event);
+//     for (j=0; j < randomFellowName.length; j++) {
+//         if (event.key === randomFellowName[j]) {
+//             console.log('MATCH');
+//         } else {
+//             console.log('OOPS');
+//         }
+//     }
+// });
+
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+// 	Array.from(bodyParts).forEach((part) => {
+// 		part.style.visibility = 'hidden';
+// 	});
+// });

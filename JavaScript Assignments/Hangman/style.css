@@ -30,4 +30,16 @@ body {
 .titleDiv {
     position: absolute;
 }
-  
+
+.letter-container {
+    margin-top: 400px;
+    text-align: center;
+}
+
+.letter {
+    width: 25px;
+    height: 25px;
+    border-bottom: 5px solid #ffffff;
+    display: inline-block;
+    margin-left: 5px;
+}
