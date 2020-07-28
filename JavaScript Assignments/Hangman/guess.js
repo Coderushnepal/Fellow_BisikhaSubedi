@@ -1,3 +1,5 @@
+// set.has(value) – returns true if the value exists in the set, otherwise false .
+
 var guessedWords = new Set();
 var wrongWords = new Set();
 var rightWords = new Set();
@@ -22,16 +24,20 @@ function compareMatchWord() {
         var pressedLetter = event.key;
         // to store the record of pressed keys
         guessedWords.add(pressedLetter);
-
-        for (var j=0; j < randomFellowName.length; j++) {
-            if (pressedLetter == randomFellowName[j]) {
-                displayRightGuess(pressedLetter , j);
-                // console.log(pressedLetter);
-            } else {
-                // displayWrongGuess(value);
-            }
-        } 
-    })
+        if (randomFellowName.includes(pressedLetter)) {
+            for (var j=0; j < randomFellowName.length; j++) {
+                if (pressedLetter == randomFellowName[j]) {
+                    displayRightGuess(pressedLetter , j);
+                      console.log(pressedLetter);
+                
+                }
+            } 
+        }else {
+            wrongWords.add(pressedLetter);
+            displayWrongGuess(wrongWords);
+        }
+       
+    });
 }
 
 // Displayes the matched letters received from compareMatchWord()
@@ -41,10 +47,36 @@ function displayRightGuess(value, index) {
 	letterContainer.innerHTML = value;
 }
 
-function displayWrongGuess(value) {
-    var wrongLetters = document.createElement('div');
-    wrongLetters.innerHTML = 'Wrong Letters';
+var figureParts = document.getElementsByClassName('figure-part');
+// console.log(figureParts);
+window.onload = function() {
+   Array.from(figureParts).forEach((value) => {
+        value.style.visibility = 'hidden';
+   });
+};
+
+function displayWrongGuess(wrongWords) {
+    // console.log(wrongWords); //Set of wrong letters aairako chha
+    var wrongLetterContainerr = document.getElementById('wrong-letter-container');
+    wrongLetterContainerr.innerHTML = "Wrong Guess" +' :'+ Array.from(wrongWords).join(',');
+    document.body.appendChild(wrongLetterContainerr);
+    
+    // display figure parts
+    displayFigureParts();
+
+    if(Array.from(wrongWords).length > figureParts.length) {
+        alert('Game Over');
+    }
 }
+
+// To display the figure parts
+var k = 0;
+function displayFigureParts() {
+    // console.log(figureParts[k]);
+    figureParts[k].style.visibility = 'visible';
+    k++;
+}
+
 
 compareMatchWord();
 

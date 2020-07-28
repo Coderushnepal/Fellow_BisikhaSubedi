@@ -43,3 +43,9 @@ body {
     display: inline-block;
     margin-left: 5px;
 }
+
+.wrong-letter-container {
+    height: 300px;
+    width: 300px;
+    padding-left: 500px;
+}

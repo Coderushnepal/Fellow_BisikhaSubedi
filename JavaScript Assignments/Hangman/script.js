@@ -34,13 +34,6 @@ var letterCount = function() {
     }
 }
 
-var figureParts = document.getElementsByClassName('figure-part');
-window.onload = function() {
-   Array.from(figureParts).forEach((value) => {
-        value.style.visibility = 'hidden';
-   });
-};
-
 letterCount();
 
 
