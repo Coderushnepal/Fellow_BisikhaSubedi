@@ -56,3 +56,19 @@ body {
     background-color: #3c556f;
     text-align: center;
 }
+
+.game-over {
+    height: 100px;
+    width: 200px;
+    background-color: #3c556f;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+}
+
+.game-over-btn {
+    padding: 10px 20px;
+    background-color: rgb(102, 201, 204);
+    color: #ffffff;
+    margin-top: 20px;
+}

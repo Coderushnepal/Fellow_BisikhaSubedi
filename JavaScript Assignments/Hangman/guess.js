@@ -64,10 +64,8 @@ function displayWrongGuess(wrongWords) {
     
     // display figure parts
     displayFigureParts();
-
-    if(Array.from(wrongWords).length === figureParts.length) {
-        console.log('game over!!');
-    }
+    gameover();
+   
 }
 
 // To display the figure parts
@@ -76,6 +74,32 @@ function displayFigureParts() {
     // console.log(figureParts[k]);
     figureParts[k].style.visibility = 'visible';
     k++;
+}
+
+function gameover() {
+    var gameOver = document.getElementById('game-over');
+    var playAgainBtn = document.getElementById('game-over-btn');
+
+    if(Array.from(wrongWords).length === figureParts.length) {
+
+        gameOver.innerHTML = 'Game Over!!!';
+        playAgainBtn.innerHTML = 'Play Again';
+
+        document.body.appendChild(gameOver);
+        gameOver.appendChild(playAgainBtn);
+        gameOver.style.display = 'block';
+
+        // Reload the browser window on button click
+        playAgainBtn.addEventListener('click' , function(){
+            window.location.reload();
+            gameOver.style.display = 'none';
+        });
+
+    } else {
+        gameOver.style.display = 'none';
+    }
+    
+
 }
 
 
