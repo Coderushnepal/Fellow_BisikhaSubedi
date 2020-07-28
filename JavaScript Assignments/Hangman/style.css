@@ -49,3 +49,10 @@ body {
     width: 300px;
     padding-left: 500px;
 }
+
+.already-guessed {
+    height: 100px;
+    width: 300px;
+    background-color: #3c556f;
+    text-align: center;
+}

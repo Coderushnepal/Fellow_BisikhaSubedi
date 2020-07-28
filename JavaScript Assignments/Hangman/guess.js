@@ -2,43 +2,44 @@
 
 var guessedWords = new Set();
 var wrongWords = new Set();
-var rightWords = new Set();
+// var rightWords = new Set();
 
 // Get the letters from the keypress event and add to the guessedWords
 
-function getPressedKey() {
-    document.addEventListener ('keypress' , function(event){
-        var compareLetter = guessedWords.add(event.key).values();
-        var compareLetterArray = Array.from(compareLetter);
-         for ( j= 0; j < randomFellowName.length; j++ ) {
-             if (compareLetterArray.pop() == randomFellowName[j]) {
-                 console.log('MILYO');
-                 // letters.innerHTML = randomFellowName[j];
-             } 
-         }
-     });
-}
+function compareMatchTwo() {
+    document.addEventListener('keypress' , function(event) {
 
-function compareMatchWord() {
-    document.addEventListener ('keypress' , function(event) {
-        var pressedLetter = event.key;
-        // to store the record of pressed keys
-        guessedWords.add(pressedLetter);
-        if (randomFellowName.includes(pressedLetter)) {
-            for (var j=0; j < randomFellowName.length; j++) {
-                if (pressedLetter == randomFellowName[j]) {
-                    displayRightGuess(pressedLetter , j);
-                      console.log(pressedLetter);
-                
-                }
+    var alreadyGuessed = document.getElementById('already-guessed');
+    document.body.appendChild(alreadyGuessed);
+
+        if( Array.from(guessedWords).includes(event.key)) {
+            
+            console.log(alreadyGuessed);
+            alreadyGuessed.style.display = 'block';
+            alreadyGuessed.innerHTML = event.key +" has already been guessed";
+            
+        } else {
+            alreadyGuessed.style.display = 'none';
+            guessedWords.add(event.key);
+             
+            if (randomFellowName.includes(event.key)) {
+                    for (var j=0; j < randomFellowName.length; j++) {
+                        if (event.key == randomFellowName[j]) {
+                            displayRightGuess(event.key , j);
+                              console.log(event.key);
+                        
+                        }
+                    } 
+            }else {
+                wrongWords.add(event.key);
+                displayWrongGuess(wrongWords);
             } 
-        }else {
-            wrongWords.add(pressedLetter);
-            displayWrongGuess(wrongWords);
+    
         }
-       
+    
     });
 }
+compareMatchTwo();
 
 // Displayes the matched letters received from compareMatchWord()
 function displayRightGuess(value, index) {
@@ -64,8 +65,8 @@ function displayWrongGuess(wrongWords) {
     // display figure parts
     displayFigureParts();
 
-    if(Array.from(wrongWords).length > figureParts.length) {
-        alert('Game Over');
+    if(Array.from(wrongWords).length === figureParts.length) {
+        console.log('game over!!');
     }
 }
 
@@ -78,7 +79,6 @@ function displayFigureParts() {
 }
 
 
-compareMatchWord();
 
 
 
