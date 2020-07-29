@@ -21,8 +21,8 @@ titleDiv.appendChild(subHeading);
 
 // Fetch the name of fellows
 var fellows = nameList.split('\n');
-var randomFellow = fellows[Math.floor(Math.random() * fellows.length)].toLowerCase();
-var randomFellowName = randomFellow.split(''); //yesma fellow ko name in letters aairakochha
+var randomFellow = fellows[Math.floor(Math.random() * fellows.length)].toLowerCase(); //barsha
+var randomFellowName = randomFellow.split(''); //yesma fellow ko name in letters aairakochha // [b,a,r,s,h,a]
 
 console.log(randomFellowName);  
 var letterCount = function() {
