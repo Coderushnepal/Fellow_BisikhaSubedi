@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Third Assignment</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">">
     <style>
-        .user-input {
-            text-align: center;
-            margin-top: 50px;
-        }
-        .pass-inpt {
-            padding: 10px;
-        }
-
-        .user-input .fas.active{
-            color: #0984e3;
-        }
+    .container {
+      padding: 40px;
+      margin: 0 auto;
+      background-color: lightblue;
+      width: 400px;
+      text-align: right;
+    }
+    .pwd-container {
+      width: 100%;
+    }
+    .container i {
+      margin-left: -30px;
+      cursor: pointer;
+    }
+    .password {
+      width: 95%;
+      height: 30px;
+    }
     </style>
 </head>
 <body>
-    <div class="user-input">
-        <input id="password-input" class="password-input" type="password">
-        <i class="fas fa-eye"></i>
-        <!-- <i class="fa fa-eye-slash" aria-hidden="true"></i> -->
+    <div class="container">
+        <div class="pwd-container">
+            <label for="password"></label>
+            <input type="password" class="password" id="password" placeholder="Your Password">
+            <i class="fa fa-eye-slash fa-eye" id="showpwd" aria-hidden="true"></i>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
 </html>
 
+      

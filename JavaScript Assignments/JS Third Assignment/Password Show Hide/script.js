@@ -1,19 +1,19 @@
 // Click on show password button displays the password. Changes the type=password to type=text
 
-var password = document.getElementById('password-input');
-var icon = document.querySelector(".fa-eye");  
-// var iconClose = document.querySelector(".fa-eye-slash");  
+var password = document.getElementById('password');
+var showPwd = document.getElementById('showpwd'); 
 
-var clickResponse = function(e) {
-    this.classList.toggle("active"); 
-    if (password.getAttribute('type') == "password") {
-        password.setAttribute('type', 'text');
+showPwd.addEventListener('click' , function(e){
+    var type = password.getAttribute('type') == 'password' ? 'text' : 'password';
+    password.setAttribute('type' , type);
+    if (type == 'text') {
+        this.classList.remove('fa-eye-slash'); //classList lay always gives array of class 
+        this.classList.add('fa-eye');
     } else {
-        password.setAttribute('type', "password");
+        this.classList.toggle('fa-eye-slash');
     }
-}
+});
 
-icon.addEventListener('click' , clickResponse);
 
 
 
