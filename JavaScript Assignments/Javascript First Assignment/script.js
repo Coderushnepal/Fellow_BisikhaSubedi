@@ -133,14 +133,17 @@ console.log('\n');
 console.log("Answer 5");
 
 // Q5
-function KeysandValues( obj ) {
-    console.log( Object.keys(obj) );
-    console.log ( Object.values(obj) );
-}       
-var obj = {
-    a: "Apple", 
-    b: "Microsoft", 
-    c: "Google" 
+
+function keysAndValues(obj) {
+	let keys = Object.keys(obj);
+	keys.sort();
+	let values = [];
+	for (i = 0; i < keys.length; i++) {
+		values[i] = obj[keys[i]];
+	}
+	return [ keys, values ];
 }
 
-KeysandValues (obj);
+console.log(keysAndValues({ a: "Apple", b: "Microsoft", c: "Google" }));
+console.log(keysAndValues({ a: 1, b: 2, c: 3 }));
+console.log(keysAndValues({ key1: true, key2: false, key3: undefined }));
