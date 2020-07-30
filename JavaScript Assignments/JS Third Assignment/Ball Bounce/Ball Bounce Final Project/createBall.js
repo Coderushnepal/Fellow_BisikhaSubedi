@@ -13,10 +13,18 @@ function createBall() {
         this.ball.style.borderRadius = "50%";
 
         // color property
-        var colors = [ "SteelBlue", "Tan",  "Teal",  "Thistle", "Tomato", "Turquoise", "Violet"];
+        var colors = [ "SteelBlue", "Tan",  "Teal",  "Thistle", "Tomato", "Turquoise", "Violet", "Pink" , "Red" , "Yellow"];
         this.ball.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 
         document.body.appendChild(this.ball);  
+
+        // Remove on Click
+        this.ball.addEventListener('click' , function() {
+            // console.log(this.ball);
+            if (that.canbedeleted) {
+               that.remove();
+            }
+        });
     }
 
     // Setting random dimension of the balls
@@ -39,27 +47,34 @@ function createBall() {
         };
     };
 
-    // Function for the fall of balls
+    // For Position
+    this.setPosition = function(x, y) {
+		this.ball.style.top = x + 'px';
+		this.ball.style.left = y + 'px';
+	};
+
+	this.getPosition = function() {
+		// console.log(this.ball.style.top);
+		return {
+			x: parseInt(this.ball.style.top),
+			y: parseInt(this.ball.style.left)
+		};
+	};
+
+    // Function for the fall of balls. 1second ma 60 choti run hunchha yo function.
     this.direction = function() {
         this.canbedeleted = true;
+        rand = Math.random();
         this.interval = setInterval(function(){
             var currentTop = that.ball.style.top;
-            var nextTop = parseInt(currentTop) + (Math.random() * 8);
+            var nextTop = parseInt(currentTop) + (rand * 200) % 3 + 1;
             that.ball.style.top = nextTop + 'px';
         }, 1000/60);
     };
 
-    // Remove on Click
-    // this.ball.addEventListener('click' , function() {
-    //     // console.log(this.ball);
-    //     // if (that.canbedeleted) {
-    //     //     // that.remove();
-    //     // }
-    // });
-
-    // this.remove = function() {
-    //     document.body.removeChild(this.ball);
-    //     clearInterval(interval);
-    //     this.delete = true;
-    // }
+    this.remove = function() {
+        document.body.removeChild(this.ball);
+        clearInterval(this.interval);
+        this.delete = true;
+    }
 }
