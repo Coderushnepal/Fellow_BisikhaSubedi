@@ -23,6 +23,7 @@ titleDiv.appendChild(subHeading);
 var fellows = nameList.split('\n');
 var randomFellow = fellows[Math.floor(Math.random() * fellows.length)].toLowerCase(); //barsha
 var randomFellowName = randomFellow.split(''); //yesma fellow ko name in letters aairakochha // [b,a,r,s,h,a]
+console.log(randomFellowName);
 
 console.log(randomFellowName);  
 var letterCount = function() {
@@ -35,24 +36,3 @@ var letterCount = function() {
 }
 
 letterCount();
-
-
-
-// document.addEventListener ('keypress' , function(event){
-//     // console.log(event);
-//     for (j=0; j < randomFellowName.length; j++) {
-//         if (event.key === randomFellowName[j]) {
-//             console.log('MATCH');
-//         } else {
-//             console.log('OOPS');
-//         }
-//     }
-// });
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-// 	Array.from(bodyParts).forEach((part) => {
-// 		part.style.visibility = 'hidden';
-// 	});
-// });

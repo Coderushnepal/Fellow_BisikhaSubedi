@@ -4,7 +4,7 @@ console.log(typeof(figureParts));
 // var i = [1,2,3,4];
 var guessedWords = new Set();
 var wrongWords = new Set();
-// var rightWords = new Set();
+var rightWords = [];
 
 // Get the letters from the keypress event and add to the guessedWords
 
@@ -22,7 +22,7 @@ function compareMatchTwo() {
     var alreadyGuessed = document.getElementById('already-guessed');
     document.body.appendChild(alreadyGuessed);
 
-        // console.log(event.key);q
+        // console.log(event.key);
         if( Array.from(guessedWords).includes(event.key)) {
             
             console.log(alreadyGuessed);
@@ -57,10 +57,12 @@ compareMatchTwo();
 // Displayes the matched letters received from compareMatchWord()
 function displayRightGuess(value, index) {
     // var letterContainer = document.querySelector('.letter');
+    rightWords.push(value);
     const letterContainer = document.getElementById('letter-container').children[index];
-	letterContainer.innerHTML = value;
+    letterContainer.innerHTML = value;
+    gameWon(rightWords);
 }
-
+// console.log('right words array is' , rightWords);
 
 // console.log(figureParts);
 window.onload = function() {
@@ -111,6 +113,26 @@ function gameover() {
 
     } else {
         gameOver.style.display = 'none';
+    }
+}
+
+function gameWon(rightWords) {
+    var gameWon = document.getElementById('game-won');
+    var playAgainBtn = document.getElementById('game-over-btn');
+
+    if(rightWords.length === randomFellowName.length) {
+        // console.log('You won!!!');
+        gameWon.innerHTML = "Congratulations, you won!!";
+        playAgainBtn.innerHTML = 'Play Again';
+
+        document.body.appendChild(gameWon);
+        gameWon.appendChild(playAgainBtn);
+        gameWon.style.display = 'block';
+
+        // Reload the browser window on button click
+        playAgainBtn.addEventListener('click' , function(){
+            window.location.reload();
+        });
     }
 }
 
