@@ -6,3 +6,10 @@ export const success = ({ title, message }) => {
         message: message,
     });
 };
+
+export const error = ({title, message}) => {
+    iziToast.error({
+        title,
+        message,
+    });
+};

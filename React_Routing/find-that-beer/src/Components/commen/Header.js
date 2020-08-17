@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import * as routes from '../constants/routes'
+import * as routes from '../constants/routes';
+import PropTypes from 'prop-types';
 
 class Header extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
+        this.state = {  
             searchText : "",
         }
     }
@@ -16,6 +17,12 @@ class Header extends Component {
             searchText : event.target.value,
         })
     }
+
+    search = (event) => {
+        //this.props.setSearchText ma ekota string pathauna parthyo which is state ko searchText
+        event.preventDefault();
+        this.props.setSearchText(this.state.searchText);
+    } 
 
     render() {
         return (
@@ -27,14 +34,14 @@ class Header extends Component {
                                 <Link to={routes.HOME} title="home">Home</Link>
                             </li>
                             <li>
-                                <Link to={routes.FAVORITES} title="favorites">Favorites</Link>
+                                <Link to={routes.FAVOURITES} title="favourites">Favourites</Link>
                             </li>
                         </ul>
                     </div>
                     <div className="header__bottom">
                         <h1>The beer bank</h1>
                         <span>Find your favorite beer here</span>
-                        <form>
+                        <form onSubmit={this.search}>
                             <input type="text" placeholder="search beer here" value={this.state.searchText} onChange={this.handleTextChange} />
                         </form>
                     </div>
@@ -42,6 +49,10 @@ class Header extends Component {
             </header>
         )
     }
+}
+
+Header.propTypes = {
+    setSearchText: PropTypes.func,
 }
 
 export default Header;

@@ -26,9 +26,12 @@ class BeerModal extends Component {
                 beer : data,
                 isLoading: false,
             });
-            toast.success({ title: 'Yayy' , message: 'beers successfully retrived' });
+            // every success ma message dekhairanu pardaina but it can be shown as below
+            // toast.success({ title: 'Yayy' , message: 'beers successfully retrived' });
         } catch (error) {
-            toast.success({title: 'Oh Snap!!' , message: 'beers failed to retrive'});
+            // console.log('The error is' , error.respone);
+            const errorMsg = error.response.data.data[0].msg;
+            toast.error({title: 'Oh Snap!!' , message: errorMsg });
         } 
     };
 
