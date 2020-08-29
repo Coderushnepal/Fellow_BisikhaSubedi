@@ -1,8 +1,9 @@
 import React from "react";
-import SideNav from "../../constants/SideNav/SideNav";
+// import SideNav from "../../constants/SideNav/SideNav";
 
 import iziToast from "izitoast";
-import Loader from "../Loader";
+import Loader from "./Loader";
+// import Loader from "../Loader";
 
 class About extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class About extends React.Component {
         name: "",
         email: "",
         address: "",
-        phonenumber: "",
+        comment: "",
       },
       isLoading: false,
     };
@@ -31,9 +32,9 @@ class About extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
 
-    const { name, email, address, phonenumber } = this.state.formData;
+    const { name, email, address, comment } = this.state.formData;
 
-    if (!name || !email || !address || !phonenumber) {
+    if (!name || !email || !address || !comment) {
       let fieldName;
       if (!name) {
         fieldName = "Name";
@@ -42,7 +43,7 @@ class About extends React.Component {
       } else if (!address) {
         fieldName = "Address";
       } else {
-        fieldName = "Phonenumber";
+        fieldName = "comment";
       }
 
       iziToast.show({
@@ -69,7 +70,7 @@ class About extends React.Component {
 
   render() {
     // console.log(this.state.formData);
-    const { name, email, address, phonenumber } = this.state.formData;
+    const { name, email, address, comment } = this.state.formData;
     return (
       <div className="form-card">
         <form onSubmit={this.handleSubmit}>
@@ -103,14 +104,16 @@ class About extends React.Component {
             value={address}
           />
           <br />
-          <label htmlFor="number">Phone Number</label>
+          <label htmlFor="number">Comment</label>
           <br />
-          <input
+          <textarea
+            rows="15"
+            cols="50"
             onChange={this.handleChange}
             type="text"
-            id="phonenumber"
-            name="phonenumber"
-            value={phonenumber}
+            id="comment"
+            name="comment"
+            value={comment}
           />
           <br />
           <button type="submit" className="btn-primary">

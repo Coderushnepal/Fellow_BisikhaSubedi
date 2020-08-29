@@ -1,18 +1,25 @@
-import React from 'react';
-
-import './portfolio.css';
-import  SideNav from '../../constants/SideNav/SideNav';
+import React from "react";
+import Typewriter from "typewriter-effect";
 
 export const Portfolio = ({ handleSectionClick }) => {
-    // let handleMethod = props.handleMethod;
-    return (
-        <div className="portfolio-container">
-            <div className="sidenav-container">
-                <SideNav handleSectionClick={handleSectionClick}/>
-            </div>  
-            <div className="main-section-container">
-                <p>main section container</p>
-            </div>
-        </div>
-    )
-}
+  // let handleMethod = props.handleMethod;
+  //component first time render huda run hunch
+
+  return (
+    <h1>
+      I am a &nbsp;
+      <Typewriter
+        options={{
+          strings: [
+            "Learner ?",
+            "Tech Enthusiast ?",
+            "Teacher ?",
+            "Umm, I have no Idea :)",
+          ],
+          autoStart: true,
+          loop: true,
+        }}
+      />
+    </h1>
+  );
+};

@@ -3,9 +3,8 @@ import { blogData } from "../../constants/blogData";
 import SideNav from '../../constants/SideNav/SideNav';
 
 import BlogCard from "./BlogCard";
+import './blogs.css';
 
-// import Header from "../../components/common/header";
-// import Footer from "../../components/common/footer";
 class BlogGrid extends Component {
     constructor(props) {
         super(props)
@@ -34,7 +33,6 @@ class BlogGrid extends Component {
         // const { isLoading } = this.state;
         return (
             <div>
-                <SideNav />
                 <main>
                     <div className="container"
                         ref={(r) => (this.scrollPartnerRef = r)}>

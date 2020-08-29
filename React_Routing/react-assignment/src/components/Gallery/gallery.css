@@ -1,0 +1,30 @@
+.slider-image {
+  width: 800px;
+  height: 400px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.image-container {
+  position: relative;
+}
+
+.review-button {
+  position: absolute;
+  top: 20rem;
+  left: 2rem;
+}
