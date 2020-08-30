@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import BlogGrid from './BlogGrid';
-const Blogs = () =>(
-    <div>
-        {/* <Header /> */}
-        <BlogGrid />
-        {/* <Footer /> */}
-    </div>
-) 
+import BlogGrid from "./BlogGrid";
+const Blogs = () => (
+  <div>
+    <BlogGrid />
+  </div>
+);
 
 export default Blogs;

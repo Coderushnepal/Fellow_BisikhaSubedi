@@ -1,9 +1,9 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import * as routes from "../constants/routes";
 
 import Main from "./Main";
-import About from "./About";
+import Contact from "./Contact";
 import Blogs from "./Blogs";
 import Gallery from "./Gallery";
 import Review from "./Review";
@@ -14,7 +14,7 @@ const AppRouter = () => (
     <Route exact path={routes.HOME} component={Main} />
     <Route exact path={routes.BLOGS} component={Blogs} />
     <Route exact path={routes.GALLERY} component={Gallery} />
-    <Route exact path={routes.ABOUT} component={About} />
+    <Route exact path={routes.CONTACT} component={Contact} />
     <PrivateRoute exact path={routes.REVIEW} component={Review} />
   </Switch>
 );

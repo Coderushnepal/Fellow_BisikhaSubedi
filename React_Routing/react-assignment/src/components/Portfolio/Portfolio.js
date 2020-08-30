@@ -14,7 +14,7 @@ export const Portfolio = ({ handleSectionClick }) => {
             "Learner ?",
             "Tech Enthusiast ?",
             "Teacher ?",
-            "Umm, I have no Idea :)",
+            "Still Discovering yo! :)",
           ],
           autoStart: true,
           loop: true,

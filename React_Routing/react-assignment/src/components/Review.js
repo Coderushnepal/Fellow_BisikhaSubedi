@@ -5,7 +5,7 @@ import iziToast from "izitoast";
 import Loader from "./Loader";
 // import Loader from "../Loader";
 
-class About extends React.Component {
+class Review extends React.Component {
   constructor(props) {
     super(props);
 
@@ -125,4 +125,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Review;

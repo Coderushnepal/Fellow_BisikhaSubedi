@@ -3,14 +3,9 @@ import { NavLink } from "react-router-dom";
 import * as routes from "../routes";
 
 import "./SideNav.css";
-import avatar from "../../assets/images/avatar.jpg";
 import { Component } from "react";
 
 class SideNav extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <div className="sidenav">
@@ -53,11 +48,11 @@ class SideNav extends Component {
           </p>
           <p className="section-list-element">
             <NavLink
-              to={routes.ABOUT}
-              title="about"
+              to={routes.CONTACT}
+              title="contact"
               style={{ textDecoration: "none" }}
             >
-              About
+              Contact
             </NavLink>
           </p>
         </div>

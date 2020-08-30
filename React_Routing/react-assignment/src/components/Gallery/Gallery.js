@@ -9,7 +9,6 @@ import {
 import "pure-react-carousel/dist/react-carousel.es.css";
 
 import { imageList } from "../../constants/imageList";
-import SideNav from "../../constants/SideNav/SideNav";
 import "./gallery.css";
 
 export default class extends React.Component {
@@ -36,7 +35,7 @@ export default class extends React.Component {
                       Review this image
                     </button>
                   </div>
-                  <img className="image" src={image.url}></img>
+                  <img className="image" src={image.url} alt="image-alt"></img>
                 </div>
               </Slide>
             ))}

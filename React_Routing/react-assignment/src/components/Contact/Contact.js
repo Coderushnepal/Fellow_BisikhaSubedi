@@ -1,10 +1,9 @@
 import React from "react";
-import SideNav from "../../constants/SideNav/SideNav";
 
 import iziToast from "izitoast";
 import Loader from "../Loader";
 
-class About extends React.Component {
+class Contact extends React.Component {
   constructor(props) {
     super(props);
 
@@ -122,4 +121,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Contact;
