@@ -29,15 +29,18 @@ var formAttributes = [
         error: "Password2 is required"
     }
 ]   
-
+console.log(this);
 function Form() {
+    console.log(this);
     this.createFormContainer = function(container) {
+        console.log(container);
         this.form = document.createElement('form');
         this.form.classList.add('form');
         container.append(this.form);
     };
 
     this.createForm = function(value, index) {
+        console.log(value)
         var label = document.createElement('label');
         label.id = index + 1;
         label.for = value.name;

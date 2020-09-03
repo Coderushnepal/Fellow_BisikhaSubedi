@@ -1,5 +1,5 @@
 //Q1. namelist lai array of fellow ma break, then each fellow name lai split
-
+console.log('Answer 1');
 var nameList = `Neeta sapkota
 Neha shiwakoti
 Srijana Khatiwada 
@@ -18,63 +18,64 @@ Kritika Baral
 Srijana Thulung`;
 nameList = nameList.split('\n');
 
-var fellows = function(array) {
-	return array.map(function(value, index) {
-		var obj = {};
-		var name = value.split(' ');
-		obj['id'] = index + 1;
-		obj['firstName'] = name[0].charAt(0).toUpperCase() + name[0].slice(1);
-		obj['lastName'] = name[1].charAt(0).toUpperCase() + name[0].slice(1);
-		// console.log(obj);
-		return obj;
-	});
-};
+var result = nameList.map(function(value, index) {
+	var obj = {};
+	var name = value.split(' ');
+	var firstName = name[0];
+	var lastName =	name[1];
 
-console.log(fellows(nameList));
+	obj['id'] = index + 1;
+	obj['firstName']  = firstName[0].toUpperCase().concat(firstName.substring(1));;
+	obj['lastName']   = lastName[0].toUpperCase().concat(lastName.substring(1));;
+	return obj;
+});
+
+console.log(result);
+
+console.log('\n');
 
 // Q2. Alphabet Count 
+console.log('Answer 2');
 
-var alphabetCount = function(array, char) {
-	var getArrayFromQ1 = fellows(array);
-	var finder = getArrayFromQ1.filter(function(value) {
-		return value.firstName.charAt(0).toUpperCase() == char.toUpperCase();
+function find(char) {
+    var finder = result.filter(function(value) {
+        return value.firstName.charAt(0) === char.toUpperCase();
 	});
-	var startingWith = finder.length;
-	var startingWithout = getArrayFromQ1.length - startingWith;
-	return char + ': ' + startingWith + ' and ' + startingWithout;
-};
+	return char + ': ' + (finder.length) + ' and ' + (result.length - finder.length);
+}
 
-console.log(alphabetCount(nameList, 's'));
-console.log(alphabetCount(nameList, 'a'));
-console.log(alphabetCount(nameList, 'k'));
-console.log(alphabetCount(nameList, 'r'));
+console.log(find('s'));
+console.log(find('a'));
 
+console.log('\n');
 
 // Q3
+console.log('Answer 3');
 
-var result3 = function(array) {
-	var getArrayFromQ1 = fellows(array);
-	var organized = getArrayFromQ1.reduce(function(acc, value, index) {
-		var storeId = value.id;
-		delete value.id;
-		acc[storeId] = value;
-		return acc;
-	}, {});
-	return organized;
-};
+var final = result.reduce(function(acc,value,index){
+	var storeId = value.id;
+	delete value.id;
+	acc[storeId] = value;
+	return acc;
+},{});
 
-console.log(result3(nameList));
+console.log(final);
+console.log('\n');
 
 // Q4
+console.log('Answer 4');
+
 var sequence = function(str) {
 	return str.split('1').sort().pop();
 };
 
 console.log(sequence('1110011000001100'));
 
-// Q5
+console.log('\n');
 
-var obj ={
+// Q5
+console.log('Answer 5');
+var vowels ={
     a: 1,
     e: 2,
     i: 3,
@@ -88,7 +89,8 @@ var replaceVowel = function(str) {
 };
 
 console.log(replaceVowel('karachi'));
-
+console.log(replaceVowel('chembur'));
+console.log(replaceVowel('khandbari'));
 
 // name.split('').map(function (value){ 
 // return obj[value] ? obj[value]: value

@@ -18,7 +18,7 @@ var submitBtn = document.getElementById('submit-btn');
 
 
 submitBtn.addEventListener('click' , function(event) {
-    // console.log('Helloo');
+    // console.log(event);
     var isFormValid = validateFunction(event);
     // console.log(isFormValid);
     if ( ! isFormValid ) {
@@ -29,6 +29,7 @@ submitBtn.addEventListener('click' , function(event) {
 // validating condition of the input fields
 function Validate() {
     this.isUsernameValid = function(value) {
+    console.log('value is' , value);
 		return value.length < 3 || value == '' ? false : true;
     };
     
@@ -41,7 +42,7 @@ function Validate() {
         return value.length < 6 || value == '' ? false : true;
     };
 
-    this.isPassword2Valid = function(value, pwd1) {
+    this.isPassword2Valid = function(value, password) {
         return result = value ===password && value !== '' ? true : false;
     }
 }

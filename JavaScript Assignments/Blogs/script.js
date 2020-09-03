@@ -1,5 +1,7 @@
 // creating the containers
 const mainContainer = document.createElement('div');
+var searchDiv = document.createElement('input');
+
 
 // creating a heading 
 const heading = document.createElement('h1');
@@ -49,4 +51,17 @@ blogdetails.map(function(value , index) {
     blogContainer.style.marginBottom = '20px';
 });
 
+// added
+searchDiv.id = 'searchdiv';
+// console.log(searchDiv.id);
+
+searchDiv.setAttribute('type' , 'text');
+searchDiv.setAttribute('placeholder' , 'Search');
+searchDiv.setAttribute('onkeyup' , 'searchFilter()');
+
+var searchh = document.getElementById('searchdiv')
+
+function searchFilter() {
+
+}
 

@@ -37,33 +37,3 @@ return true if valid else return false;
     console.log(this.nameLabel);
         // Setting propoertie
 s of input field
-        this.nameLabel.innerText = "User Name";
-    
-    this.nameInput = document.createElement("input");
-        this.nameInput.setAttribute('type' , 'text');
-        this.nameInput.setAttribute('name','fullname');
-        this.nameInput.setAttribute('placeholder', 'Enter username');
-
-    this.emailLabel = document.createElement('label');
-        this.emailLabel.innerText = "Email";
-
-    this.emailInput = document.createElement("input");
-        this.nameInput.setAttribute('type' , 'text');
-        this.nameInput.setAttribute('name','email');
-        this.nameInput.setAttribute('placeholder', 'Enter Email Adress');
-
-    this.passwordLabel = document.createElement('label');
-        this.passwordLabel.innerText = "Password";
-
-    this.passwordInput = document.createElement("input");
-        this.nameInput.setAttribute('type' , 'password');
-        this.nameInput.setAttribute('name','fullname');
-        this.nameInput.setAttribute('placeholder', 'Enter username');
-
-    this.confirmPasswordLabel = document.createElement('label');
-        this.confirmPasswordLabel.innerText = "Email";
-
-    this.confirmPasswordInput = document.createElement("input");
-        this.nameInput.setAttribute('type' , 'password');
-        this.nameInput.setAttribute('name','fullname');
-        this.nameInput.setAttribute('placeholder', 'Enter username');
