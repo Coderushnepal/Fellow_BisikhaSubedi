@@ -1,0 +1,40 @@
+Write Joi validation schema for the following context
+
+Adding a note
+1. title
+- string
+- maximum 200 characters
+- empty string also allowed
+- null values not allowed //baki
+- mandatory
+
+2. details
+- string
+- maximum 1000 characters
+- empty and null values not allowed //baki
+- mandatory
+
+3. typeId
+- number
+- should be either 1, 2, 3, 4, 5 //baki
+- mandatory
+
+4. attachments
+- array
+- each array item should have following properties
+   - url -> string/url, mandatory
+   - filename -> string
+
+5. isPrivate
+- boolean
+- mandatory
+
+
+
+//Notes
+1. Babel lay ES6 or tyo bhanda mathi ko syntax lai ES5 ma convert garchha
+babal chalauna, babel/cli, babel/register and @babel/preset-es2015 chainchha
+
+2. URL ma Bisikha Subedi enter garda Bisikha%20Subedi hunchha, kinaki space ko representation %20 ho, aba %20 bhaneko space nai ho bhanera system lai tha dina, we do url parsing as urlencoded()
+
+3. validation ko lagi chain we use route specific middleware
