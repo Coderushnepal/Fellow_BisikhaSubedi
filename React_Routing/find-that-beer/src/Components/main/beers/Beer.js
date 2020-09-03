@@ -2,6 +2,8 @@ import React, { Component, Fragment } from "react";
 import PropTypes from 'prop-types';
 import BeerModal from './BeerModal';
 import { dummyBeersData as favourites } from "../../constants/dummyData";
+import { Counter } from '../../commen'
+
 class Beer extends Component {
     constructor(props){
         super(props);
@@ -29,6 +31,7 @@ class Beer extends Component {
         
         return(
             <Fragment>
+            <Counter />
             {showModal ? (
                 <BeerModal
                     show={showModal} 

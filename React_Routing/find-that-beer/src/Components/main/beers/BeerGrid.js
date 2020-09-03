@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import {Header} from '../../commen';
+import {Header, Spinner, Counter } from '../../commen';
 // import {dummyBeersData} from '../../constants/dummyData';
 import Beer from './Beer'
-import { Spinner } from "../../commen";
 import * as toast from "../../../utils/toast";
 
 import {fetchBeers} from '../../../services/beerService';
@@ -79,6 +78,7 @@ class BeerGrid extends Component {
                     <div className="container" ref={(r) => {
                         return (this.scrollParentRef = r);
                     }}>
+                    {/* <Counter /> */}
                     <InfiniteScroll
                         dataLength = {beers.length}
                         next={this.fetchBeers}
