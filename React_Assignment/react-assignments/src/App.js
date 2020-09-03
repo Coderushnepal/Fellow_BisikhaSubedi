@@ -1,28 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Counter from './Components/assign_1/Counter';
-import EnhancedNumberCounter from './Components/assign_1/NumberCounter';
+import React from "react";
+import "./App.css";
+// import withCount from "./withCount";
+import EnhancedNumberCounter from "./Components/assign_1/Counter";
 
-import EnhancedUser from './Components/assign_2/User';
-
+import EnhancedUser from "./Components/assign_2/User";
 
 function App() {
-  const NAMES = ["bisikha" , "sindhu" , "kirtee" , "srijana" , "elisha" , "neha" , "nita", "pooza"];
-  const PEOPLE = ["bisikha" , "sindhu" , "kirtee" , "srijana" , "elisha" , "neha" , "nita", "pooza"];
+  const NAMES = ["Bisikha", "Elisha", "Kirtee", "Eliza", "Sindhu"];
+  const PEOPLE = ["bisudha", "sindhu", "kirtee", "srijana"];
   return (
-    <div>
+    <div className="main">
+      <h1>First Assignment</h1>
       {NAMES.map((NAMES, index) => (
-              <Counter key={index} NAMES={NAMES} />
+        <EnhancedNumberCounter key={index} NAMES={NAMES} />
       ))}
-      <EnhancedNumberCounter label="My label" />
 
       {/* Map function for HOC assignment */}
-      {PEOPLE.map((PEOPLE , index) => (
-            <EnhancedUser key={index} PEOPLE={PEOPLE} />
+      <h1>Second Assignment</h1>
+      {PEOPLE.map((PEOPLE, index) => (
+        <EnhancedUser key={index} PEOPLE={PEOPLE} />
       ))}
     </div>
   );
 }
-
 export default App;

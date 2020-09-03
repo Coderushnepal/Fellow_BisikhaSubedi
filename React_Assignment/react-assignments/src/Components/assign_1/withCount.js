@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import Counter from "./Counter";
 
-const withCount = (WrappedComponent) => {
+const withCount = (Counter) => {
     class NumberAlter extends Component {
         constructor(props) {
             super(props);
@@ -19,7 +20,9 @@ const withCount = (WrappedComponent) => {
         }
 
         render() {
-            return <WrappedComponent count={this.state.count} add={this.add} subtract={this.subtract} {...this.props} />;
+            // Hoc function ma aayera counter vannay component lai enhance garera withCount ko props lai pass garda, counter component ko original props
+            // yo case ma {this.props.NAMES} harauchha. original component ko props lai preserve garna {...this.props} use garnay
+            return <Counter count={this.state.count} add={this.add} subtract={this.subtract} {...this.props}/>;
         }
     }
     return NumberAlter;

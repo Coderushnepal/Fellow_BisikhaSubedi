@@ -1,5 +1,8 @@
 import React, {Component} from "react";
-import Wing from './images/wings.jpg';
+// import Gif from 'react-gif';
+
+// import Wing from './images/wings.jpg';
+import Fly from './images/fly.gif'
 
 const withRedBull = (UserComponent) => {
     class UserEnhance extends Component {
@@ -7,15 +10,14 @@ const withRedBull = (UserComponent) => {
             super(props);
 
             this.state = {
-                img_path : Wing,
-                alt: 'wing',
-                wings : 2,
+                wings : null,
             }
         };
     
         flyAway = () => {
-            const imgg = './images/wings.jpg';
-            this.setState({img_path: imgg})
+            this.setState({
+                wings: Fly
+            })
         }
 
         render() {
