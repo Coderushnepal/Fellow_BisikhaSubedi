@@ -1,0 +1,53 @@
+{"message":"GET /users/10","level":"info"}
+{"message":"Fetching all users with user id 10","level":"info"}
+{"message":"GET /users/10","level":"info"}
+{"message":"Fetching all users with user id 10","level":"info"}
+{"message":"GET /users/10","level":"info"}
+{"message":"Fetching all users with user id 10","level":"info"}
+{"message":"Cannot find user with userid 10","level":"error"}
+{"message":"GET /users","level":"info"}
+{"message":"GET /users/4","level":"info"}
+{"message":"GET /users/4","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"GET /users/7","level":"info"}
+{"message":"Fetching all users with user id 7","level":"info"}
+{"message":"Cannot find user with userid 7","level":"error"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}

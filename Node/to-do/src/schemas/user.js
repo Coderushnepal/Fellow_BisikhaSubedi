@@ -22,9 +22,6 @@ export function validateUserCreation(req, res, next) {
     // console.log(req.body);
     next();
   } catch (err) {
-    res.json({
-      message: "Invalid data",
-      details: err.details,
-    });
+    next(err);
   }
 }

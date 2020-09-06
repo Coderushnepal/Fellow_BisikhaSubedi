@@ -1,9 +1,11 @@
 import express from "express";
 import bodyParser from "body-parser";
 import morgan from "morgan";
+import dotenv from "dotenv";
 
 import routes from "./src/routes";
 import logger from "./src/utils/logger";
+import genericErrorHandler from "./src/middlewares/genericErrorHandler";
 
 // Babel halepachhi balla es6 ko syntax anusar import garna paryo, natra tala commented way ma import garna parthyo which is not a es6 way
 
@@ -33,7 +35,10 @@ app.use(bodyParser.json()); //yo line lekhena bhanay postman bata json format ma
 app.use(morgan("tiny"));
 app.use(loggingMiddleware);
 app.use(routes);
+app.use(genericErrorHandler);
 
-app.listen(1234, () => {
-  console.log("Listening at port 1234");
+dotenv.config();
+
+app.listen(process.env.APP_PORT, () => {
+  logger.info(`Listening on port ${process.env.APP_PORT}`);
 });
