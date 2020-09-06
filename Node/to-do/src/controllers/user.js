@@ -31,13 +31,17 @@ export function getAllUsers(request, response, next) {
  * @param {*} next
  */
 export function getUserById(req, res, next) {
-  try {
-    const data = userService.getUserById(+req.params.userId);
+  userService
+    .getUserById(+req.params.userId)
+    .then((data) => res.json(data))
+    .catch((err) => next(err));
+  // try {
+  //   const data = userService.getUserById(+req.params.userId);
 
-    res.json(data);
-  } catch (err) {
-    next(err);
-  }
+  //   res.json(data);
+  // } catch (err) {
+  //   next(err);
+  // }
 }
 
 /**

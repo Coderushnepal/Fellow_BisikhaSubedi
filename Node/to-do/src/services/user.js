@@ -21,18 +21,24 @@ export async function getAllUsers() {
  * @param userId
  */
 //file bhitra kai json bata tanda chai async await ko kura aaudaina thyo but when database connection ko kura ayo, aba need to use async await
-export function getUserById(userId) {
+export async function getUserById(userId) {
   logger.info(`Fetching all users with user id ${userId}`);
 
   // const requestedUser = usersJson.find((user) => user.id === userId);
-  // const result = await connection.select
-  if (!requestedUser) {
+
+  //array destructure gareko chha. [result] garda sadhai 0 index ko value aauchha, result matra garda sabai array nai aayera basthyo
+  //0th element nai kina linay bhanda, id lay search garda sadhai 1ota matrai aauchha
+  const [result] = await connection
+    .select("*")
+    .from("users")
+    .where("id", userId);
+  if (!result) {
     logger.error(`Cannot find user with userid ${userId}`);
     throw new NotFoundError("Cannot find the user");
   }
 
   return {
-    data: requestedUser,
+    data: result,
     message: `Information about user ID ${userId}`,
   };
 }
