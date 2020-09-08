@@ -77,3 +77,62 @@
 {"message":"Listening on port 1234","level":"info"}
 {"message":"GET /users/1","level":"info"}
 {"message":"Fetching all users with user id 1","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"POST /users/","level":"info"}
+{"message":"POST /users/","level":"info"}

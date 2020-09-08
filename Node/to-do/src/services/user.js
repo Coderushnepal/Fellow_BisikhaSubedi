@@ -1,14 +1,14 @@
 import logger from "../utils/logger";
 import usersJson from "../data/users.json";
 import NotFoundError from "../utils/NotFoundError";
-import connection from "../db";
-
+import * as User from "../models/User";
+import * as UserPhoneNumber from "../models/UserPhoneNumber";
 /**
  * Get all users
  */
 export async function getAllUsers() {
   logger.info("Fetching all users");
-  const data = await connection.select("*").from("users");
+  const data = await User.getAll();
   return {
     data,
     message: "List of all users",
@@ -28,10 +28,7 @@ export async function getUserById(userId) {
 
   //array destructure gareko chha. [result] garda sadhai 0 index ko value aauchha, result matra garda sabai array nai aayera basthyo
   //0th element nai kina linay bhanda, id lay search garda sadhai 1ota matrai aauchha
-  const [result] = await connection
-    .select("*")
-    .from("users")
-    .where("id", userId);
+  const result = User.getById(userId);
   if (!result) {
     logger.error(`Cannot find user with userid ${userId}`);
     throw new NotFoundError("Cannot find the user");
@@ -48,23 +45,28 @@ export async function getUserById(userId) {
  *
  * @param {*} params
  */
-export function createUser(params) {
-  //Finding the maximum id from existing JSON file
-  const maxId = userJson.reduce((acc, current) => {
-    return current.id > acc ? current.id : acc;
-  }, 0);
-
-  usersJson.push({
-    id: maxId + 1,
-    ...params,
+export async function createUser(params) {
+  const { firstName, lastName, email, password, phoneNumbers } = params;
+  const userInsertData = await User.create({
+    firstName,
+    lastName,
+    email,
+    password,
   });
 
+  const insertDataForPhoneNumbers = phoneNumbers.map((phone) => ({
+    userId: userInsertData.id,
+    phoneNumber: phone.number,
+    type: phone.type,
+  }));
+
+  const phoneNumberInsertedData = await UserPhoneNumber.add(
+    insertDataForPhoneNumbers
+  );
+  // console.log("here????");
   return {
+    data: params,
     message: "New user added sucessfully!!",
-    data: {
-      id: maxId + 1,
-      ...params,
-    },
   };
 }
 
