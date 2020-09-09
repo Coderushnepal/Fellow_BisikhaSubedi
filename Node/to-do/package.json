@@ -28,7 +28,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch index.js --watch src/ --exec babel-node index.js"
+    "start": "nodemon --watch index.js --watch src/ --exec babel-node index.js",
+    "build": "rimraf dist && babel src/ index.js --copy-files --out-dir dist",
+    "migrate": "knex migrate:latest --knexfile src/knexfile.js",
+    "rollback": "knex migrate:rollback --knexfile src/knexfile.js"
   },
   "author": "Bisikha",
   "license": "ISC"
