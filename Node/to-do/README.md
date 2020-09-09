@@ -24,12 +24,12 @@ How to use?
         ```
 
 5.  Add the database configurations to the .env file
-    ` APP_PORT=1234 DB_HOST= localhost DB_USER=postgres DB_PASSWORD=postgres DB_NAME=users_db DB_CLIENT=pg `
+    `APP_PORT=1234 DB_HOST= localhost DB_USER=postgres DB_PASSWORD=postgres DB_NAME=users_db DB_CLIENT=pg`
 
 6.  Run the migration scripts
 
         ```
-        APP_PORT=1234
+        npm run migrate
         ```
 
 7.  Start the node server
