@@ -16,12 +16,28 @@ export const CREATE_USER_SCHEMA = Joi.object().keys({
     ),
 });
 
+const UPDATE_USER_SCHEMA = Joi.object().keys({
+  firstName: Joi.string().max(20),
+  lastName: Joi.string().max(20),
+});
+
 export function validateUserCreation(req, res, next) {
   //req.body lai validate garna kojayko ho
 
   try {
     Joi.assert(req.body, CREATE_USER_SCHEMA);
     // console.log(req.body);
+    next();
+  } catch (err) {
+    next(err);
+  }
+}
+
+export function validateUserUpdate(req, res, next) {
+  try {
+    //request.body lai update user schema sanga match garako
+    Joi.assert(req.body, UPDATE_USER_SCHEMA);
+
     next();
   } catch (err) {
     next(err);

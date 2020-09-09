@@ -10,16 +10,25 @@ import connection from "../db";
 import snakeize from "snakeize";
 import camelize from "camelize";
 
+import { FETCH_USERS_WITH_PHONE_NUMBERS } from "../db/queries/user";
+import { func } from "joi";
+
 const table = "users";
 
 export async function getAll() {
   //users bhannay table bata data dinay bhayo
-  const result = await connection.select("*").from(table);
-  return camelize(result);
+  const { rows } = await connection.raw(FETCH_USERS_WITH_PHONE_NUMBERS);
+
+  return camelize(rows);
 }
 
 export async function getById(id) {
-  const [result] = connection.select("*").from(table).where({ id });
+  // console.log("undefined here ?****************************");
+  const [result] = await connection
+    .select("*")
+    .from(table)
+    .where({ id })
+    .where("is_active", true);
 
   return result ? camelize(result) : null;
 }
@@ -32,4 +41,16 @@ export async function create(params) {
     .returning("*");
 
   return camelize(data);
+}
+
+export function remove(userId) {
+  return connection(table)
+    .update({
+      is_active: false,
+    })
+    .where({ id: userId });
+}
+
+export function update(userId, params) {
+  return connection(table).update(snakeize(params)).where({ id: userId });
 }

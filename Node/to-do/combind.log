@@ -136,3 +136,194 @@
 {"message":"Listening on port 1234","level":"info"}
 {"message":"POST /users/","level":"info"}
 {"message":"POST /users/","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/13","level":"info"}
+{"message":"Fetching all users with user id 13","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/11","level":"info"}
+{"message":"Fetching all users with user id 11","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/1","level":"info"}
+{"message":"Fetching all users with user id 1","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/6","level":"info"}
+{"message":"Fetching all users with user id 6","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/6","level":"info"}
+{"message":"Fetching all users with user id 6","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/1","level":"info"}
+{"message":"Fetching all users with user id 1","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/4","level":"info"}
+{"message":"Fetching all users with user id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/4","level":"info"}
+{"message":"Fetching all users with user id 4","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/4","level":"info"}
+{"message":"Fetching user information with id 4","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"DELETE /users/10","level":"info"}
+{"message":"Fetching user information with id 10","level":"info"}
+{"message":"DELETE /users/10","level":"info"}
+{"message":"Fetching user information with id 10","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/8","level":"info"}
+{"message":"Fetching user information with id 8","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/8","level":"info"}
+{"message":"Fetching all users with user id 8","level":"info"}
+{"message":"GET /users/8","level":"info"}
+{"message":"Fetching all users with user id 8","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/8","level":"info"}
+{"message":"Fetching all users with user id 8","level":"info"}
+{"message":"DELETE /users/8","level":"info"}
+{"message":"Fetching user information with id 8","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"DELETE /users/8","level":"info"}
+{"message":"Fetching user information with id 8","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"Listening on port 1234","level":"info"}
+{"message":"GET /users/","level":"info"}
+{"message":"Fetching all users","level":"info"}
+{"message":"GET /users/1","level":"info"}
+{"message":"Fetching user information with id 1","level":"info"}
+{"message":"PUT /users/1","level":"info"}
+{"message":"Fetching user information with id 1","level":"info"}
+{"message":"GET /users/1","level":"info"}
+{"message":"Fetching user information with id 1","level":"info"}
+{"message":"Listening on port 1234","level":"info"}

@@ -8,7 +8,17 @@ import * as UserPhoneNumber from "../models/UserPhoneNumber";
  */
 export async function getAllUsers() {
   logger.info("Fetching all users");
-  const data = await User.getAll();
+  const users = await User.getAll();
+  const data = users.map((user) => {
+    const { phoneNumbers } = user;
+
+    const hasEmptyPhoneNumber = Object.keys(phoneNumbers[0]).length === 0;
+
+    return {
+      ...user,
+      phoneNumbers: hasEmptyPhoneNumber ? [] : phoneNumbers,
+    };
+  });
   return {
     data,
     message: "List of all users",
@@ -22,20 +32,14 @@ export async function getAllUsers() {
  */
 //file bhitra kai json bata tanda chai async await ko kura aaudaina thyo but when database connection ko kura ayo, aba need to use async await
 export async function getUserById(userId) {
-  logger.info(`Fetching all users with user id ${userId}`);
-
-  // const requestedUser = usersJson.find((user) => user.id === userId);
-
-  //array destructure gareko chha. [result] garda sadhai 0 index ko value aauchha, result matra garda sabai array nai aayera basthyo
-  //0th element nai kina linay bhanda, id lay search garda sadhai 1ota matrai aauchha
-  const result = User.getById(userId);
-  if (!result) {
-    logger.error(`Cannot find user with userid ${userId}`);
-    throw new NotFoundError("Cannot find the user");
-  }
+  const result = await verifyUserExistence(userId);
+  const phoneNumbers = await UserPhoneNumber.getPhoneNumbersByUserId(userId);
 
   return {
-    data: result,
+    data: {
+      ...result,
+      phoneNumbers,
+    },
     message: `Information about user ID ${userId}`,
   };
 }
@@ -75,18 +79,9 @@ export async function createUser(params) {
  *
  * @param {*} userId
  */
-export function deleterUser(userId) {
-  const doesUserExist = usersJson.find((user) => user.id === userId);
-
-  if (!doesUserExist) {
-    logger.error(`Cannot find user with id ${userId}`);
-    throw new Error(`Cannot find user with id ${userId}`);
-  }
-
-  //The filter() method creates an array filled with all array elements that pass a test
-  //updatedlist ma chain array nai aauchha jun array ma delete gareko userId wala data hudaina
-  const updatedUsersList = usersJson.filter((user) => user.id !== userId);
-  fs.writeFileSync(usersJsonPath, JSON.stringify(updatedUsersList, null, 2));
+export async function deleteUser(userId) {
+  await verifyUserExistence(userId);
+  await User.remove(userId);
 
   return {
     message: "Deleted user with id" + userId,
@@ -99,20 +94,28 @@ export function deleterUser(userId) {
  * @param userId
  * @param params
  */
-export function updateUser(userId, params) {
-  const updatedJson = usersJson.map((user) => {
-    if (user.id === userId) {
-      return {
-        ...user,
-        ...params,
-      };
-    }
-    //if userid match garyo bhanay update garera data pathaunay, else yetikai pathaunay
-    return user;
-  });
-  fs.writeFileSync(usersJsonPath, JSON.stringify(updatedJson, null, 2));
+export async function updateUser(userId, params) {
+  //first ma user chha ki nai verify garyo
+  await verifyUserExistence(userId);
 
+  await User.update(userId, params);
   return {
+    data: {
+      ...result,
+      ...params,
+    },
     message: "Updated user with id" + userId,
   };
+}
+
+async function verifyUserExistence(userId) {
+  logger.info(`Fetching user information with id ${userId}`);
+
+  const result = await User.getById(userId);
+  if (!result) {
+    logger.error(`Cannot find user with userid ${userId}`);
+    throw new NotFoundError(`Cannot find user with userid ${userId}`);
+  }
+
+  return result;
 }
