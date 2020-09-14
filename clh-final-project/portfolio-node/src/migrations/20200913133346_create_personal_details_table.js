@@ -5,7 +5,7 @@
  * @returns {Promise}
  */
 export function up(knex) {
-  knex.schema.createTable("personal_details", (table) => {
+  return knex.schema.createTable("personal_details", (table) => {
     table.string("name", 100).notNull();
     table.specificType("iam", "text ARRAY");
   });

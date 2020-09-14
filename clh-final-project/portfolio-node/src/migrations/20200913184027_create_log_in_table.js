@@ -5,7 +5,7 @@
  * @returns {Promise}
  */
 export function up(knex) {
-  knex.schema.createTable("admin_log_in", (table) => {
+  return knex.schema.createTable("admin_log_in", (table) => {
     table.string("email", 100).notNull().unique;
     table.string("password", 200).notNull();
   });
