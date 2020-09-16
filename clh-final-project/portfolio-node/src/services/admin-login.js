@@ -12,13 +12,15 @@ import BadRequestError from "../util/BadRequestError";
  * @param params
  */
 export async function createAdmin(params) {
-  const existingAdmin = await adminLoginModels.create(params.email);
   const hashedPassword = hash(params.password);
+  const existingAdmin = await adminLoginModels.create({
+    email: params.email,
+    password: hashedPassword,
+  });
 
   return {
     data: {
       existingAdmin,
-      hashedPassword,
     },
   };
 }
@@ -30,7 +32,7 @@ export async function createAdmin(params) {
  */
 export async function adminLogin(params) {
   const { email, password } = params;
-  const admin = await adminLoginModels.getUserByEmail(email);
+  const admin = await adminLoginModels.getAdminCredentials(data);
 
   if (!admin) {
     logger.error("Invalid Login Credentials");

@@ -2,7 +2,7 @@ import connection from "../db";
 import snakeize from "snakeize";
 import camelize from "camelize";
 
-const table = "user_sessions";
+const table = "admin_sessions";
 
 export async function saveToken(adminID, token) {
   return connection.insert({ admin_id: adminID, token: token }).into(table);
