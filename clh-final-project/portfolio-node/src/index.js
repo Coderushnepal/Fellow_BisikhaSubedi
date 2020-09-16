@@ -10,10 +10,10 @@ const server = express();
 
 dotenv.config();
 server.use(cors());
+server.use(bodyParser.json());
 server.use(routes);
 
 //Middlewares
-server.use(bodyParser.json());
 
 server.listen(process.env.PORT, () => {
   logger.info(`listening on port ${process.env.PORT}`);

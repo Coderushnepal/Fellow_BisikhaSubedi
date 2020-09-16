@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
 import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./Router";
 
 const api = axios.create({
   baseURL: `http://localhost:8848/`,
