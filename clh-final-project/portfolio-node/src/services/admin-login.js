@@ -1,9 +1,9 @@
 import logger from "../util/logger";
 import * as adminLoginModels from "../models/admin-login";
-import { generateToken } from "../util/jwt";
+// import { generateToken } from "../util/jwt";
 import { hash, compare } from "../util/crypt";
 import NotFoundError from "../util/NotFoundError";
-import * as adminSession from "../models/adminSession";
+// import * as adminSession from "../models/adminSession";
 import BadRequestError from "../util/BadRequestError";
 
 /**
@@ -30,9 +30,15 @@ export async function createAdmin(params) {
  *
  * @param params
  */
-export async function adminLogin(params) {
-  const { email, password } = params;
-  const admin = await adminLoginModels.getAdminCredentials(data);
+export async function adminLogin(preq) {
+  //postman bata aako data
+  const { email, password } = preq;
+
+  //database sanga compare garne data
+  const admin = await adminLoginModels.getAdminCredentials({
+    email,
+    password,
+  });
 
   if (!admin) {
     logger.error("Invalid Login Credentials");
@@ -40,6 +46,7 @@ export async function adminLogin(params) {
     throw new BadRequestError("Invalid login credentials");
   }
 
+  //postman bata aako password ra
   const isPasswordValid = compare(password, admin.password);
   if (!isPasswordValid) {
     logger.error("Invalid login credentials");
@@ -47,18 +54,9 @@ export async function adminLogin(params) {
     throw new BadRequestError("Invalid login credentials");
   }
 
-  const token = generateToken({
-    email: admin.email,
-  });
-
-  await adminSession.saveToken(admin.email, token);
-
-  admin.password = undefined;
-
   return {
     data: {
       admin,
-      token,
     },
     message: "Logged In Successfully!!",
   };

@@ -28,8 +28,9 @@ export function createAdmin(req, res, next) {
 
 export function adminLogin(req, res, next) {
   // console.log(req.body);
+  var preq = req.body;
   adminService
-    .adminLogin(req.body)
+    .adminLogin(preq)
     .then((data) => res.json(data))
     .catch((err) => next(err));
 }

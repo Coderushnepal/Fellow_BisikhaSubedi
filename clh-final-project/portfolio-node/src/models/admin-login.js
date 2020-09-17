@@ -1,6 +1,7 @@
 import connection from "../db";
 import snakeize from "snakeize";
 import camelize from "camelize";
+import { compare } from "bcrypt";
 
 const table = "admin_log_in";
 
@@ -15,7 +16,8 @@ export async function create(params) {
 }
 
 export async function getAdminCredentials(data) {
-  const data = await connection.select("*").from(table);
-  console.log("Is credential here?", data);
-  return data ? camelize(data) : null;
+  console.log("function ma pass garda aako data:", data);
+  const [dbData] = await connection.select("*").from(table);
+  // console.log(passwordCompare);
+  return dbData ? camelize(dbData) : null;
 }
