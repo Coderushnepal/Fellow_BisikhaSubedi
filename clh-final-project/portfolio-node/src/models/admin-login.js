@@ -16,8 +16,7 @@ export async function create(params) {
 }
 
 export async function getAdminCredentials(data) {
-  console.log("function ma pass garda aako data:", data);
+  // console.log("function ma pass garda aako data:", data);
   const [dbData] = await connection.select("*").from(table);
-  // console.log(passwordCompare);
   return dbData ? camelize(dbData) : null;
 }
