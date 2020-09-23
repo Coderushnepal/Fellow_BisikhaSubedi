@@ -1,5 +1,7 @@
 import React from "react";
 import iziToast from "izitoast";
+import "./Admin.css";
+import axios from "axios";
 
 class Admin extends React.Component {
   constructor(props) {
@@ -9,9 +11,25 @@ class Admin extends React.Component {
         email: "",
         password: "",
       },
-      isLoading: false,
     };
   }
+
+  fetchData = () => {
+    axios({
+      method: "POST",
+      url: "http://localhost:8848/admin/login",
+      data: {
+        email: this.state.formData.email,
+        password: this.state.formData.password,
+      },
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   handleChange = (event) => {
     this.setState({
@@ -26,7 +44,7 @@ class Admin extends React.Component {
     event.preventDefault();
 
     const { email, password } = this.state.formData;
-
+    console.log(email, password);
     if (!email || !password) {
       let fieldName;
 
@@ -40,21 +58,6 @@ class Admin extends React.Component {
         title: "Sorry, this form could not be submitted",
         message: `Can you please fill up the ${fieldName} field`,
       });
-    } else {
-      this.setState({
-        isLoading: true,
-      });
-
-      setTimeout(() => {
-        this.setState({
-          isLoading: false,
-        });
-        iziToast.show({
-          title: "Submitted",
-          message: `Redirecting you to the dashboard`,
-        });
-        this.props.history.push("/dashboard");
-      }, 4000);
     }
   };
 
@@ -62,35 +65,48 @@ class Admin extends React.Component {
     // console.log(this.state.formData);
     const { email, password } = this.state.formData;
     return (
-      <div className="form-card">
-        <form onSubmit={this.handleSubmit}>
-          <button>Login</button>
-          <button>Sign Up</button>
-          <label htmlFor="email">Email</label>
-          <br />
+      <form onSubmit={this.handleSubmit} className="login-form">
+        <span className="login-form-title"> Admin Login </span>
+        <span className="txt"> Email </span>
+        <div className="wrap-input">
           <input
             onChange={this.handleChange}
+            className="input-value"
             type="email"
             id="email"
             name="email"
             value={email}
+            required
           />
-          <br />
-          <label htmlFor="password">Password</label>
-          <br />
+        </div>
+        <span className="txt"> Password </span>
+        <div className="wrap-input">
+          <span className="btn-show-pass">
+            <i
+              id="eyeIcon"
+              className="fa fa-eye"
+              //  onClick="myFunction()"
+            ></i>
+          </span>
           <input
             onChange={this.handleChange}
+            className="input-value"
             type="password"
-            id="password"
             name="password"
+            id="myInput"
             value={password}
           />
-          <br />
-          <button type="submit" className="btn-primary">
-            Submit{this.state.isLoading}
+        </div>
+        <div className="container-login-form-btn">
+          <button
+            type="submit"
+            className="login-form-btn"
+            onClick={this.fetchData}
+          >
+            LOG IN
           </button>
-        </form>
-      </div>
+        </div>
+      </form>
     );
   }
 }

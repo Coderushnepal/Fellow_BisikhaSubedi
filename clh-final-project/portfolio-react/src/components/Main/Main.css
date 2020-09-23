@@ -1,0 +1,54 @@
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.intro-text {
+  font-size: 32pt;
+  line-height: 36pt;
+  z-index: 1;
+  color: #ffffff;
+  text-align: center;
+}
+
+.highlight {
+  color: #e31b6d;
+  z-index: 1;
+}
+
+.primary-btn {
+  padding: 12px 50px 12px 20px;
+  position: relative;
+  font-size: 16pt;
+  border: 2px solid #ffffff;
+  display: inline;
+  line-height: 11pt;
+  z-index: 1;
+}
+
+.main-button {
+  margin-top: 20px;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.left {
+  float: left;
+  margin-right: 10px;
+}
+
+.right {
+  float: right;
+}
+
+.primary-btn {
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+}
