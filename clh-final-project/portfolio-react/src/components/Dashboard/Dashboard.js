@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import {withRouter} from 'react-router-dom';
+import { withRouter } from "react-router-dom";
 import CreatePost from "../GalleryDashboard/index";
 import BlogsDashboard from "../BlogsDashboard/index";
 import "./Dashboard.css";
@@ -12,7 +12,7 @@ const Main = (props) => {
 
   return (
     <Fragment>
-      <button className="button" onClick={handleLogOut}>
+      <button className="button-logout" onClick={handleLogOut}>
         logout
       </button>
       <div className="dashboard-container clearfix">

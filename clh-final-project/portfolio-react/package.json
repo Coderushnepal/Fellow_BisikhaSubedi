@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.20.0",
     "izitoast": "^1.4.0",
+    "pure-react-carousel": "^1.27.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-particles-js": "^3.3.0",

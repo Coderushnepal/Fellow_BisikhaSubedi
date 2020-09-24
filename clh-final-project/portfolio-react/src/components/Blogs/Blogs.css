@@ -8,9 +8,17 @@
 .blogs-container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 60px;
+  padding: 20px;
   margin: 50px auto;
   width: 50%;
-  /* position: absolute;
-  z-index: 1; */
+}
+
+.blog-title {
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+}
+
+.blog-description {
+  /* font-family: "Crimson Text", serif; */
 }

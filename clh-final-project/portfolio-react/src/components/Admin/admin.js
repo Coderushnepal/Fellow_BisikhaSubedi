@@ -1,5 +1,7 @@
 import React from "react";
 import iziToast from "izitoast";
+import { withRouter } from "react-router-dom";
+
 import "./Admin.css";
 import axios from "axios";
 
@@ -31,6 +33,11 @@ class Admin extends React.Component {
       })
       .catch((err) => {
         console.log(err);
+        this.setState({ err: "Invalid Credentials" });
+        iziToast.show({
+          title: "Sorry, this form could not be submitted",
+          message: `Invalid Credentials`,
+        });
       });
   };
 
@@ -73,6 +80,7 @@ class Admin extends React.Component {
         <div className="login-text"> Admin Login </div>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <div className="create">
+            {this.state.err && <p style={{ color: "red" }}>{this.state.err}</p>}
             <form onSubmit={this.handleSubmit} className="admin-form">
               <label className="label"> Email: </label>
               <br></br>
@@ -107,4 +115,4 @@ class Admin extends React.Component {
     );
   }
 }
-export default Admin;
+export default withRouter(Admin);

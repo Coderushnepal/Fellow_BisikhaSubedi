@@ -12,11 +12,21 @@ class SideNav extends Component {
         <ul className="section-list">
           <li className="section-list-element">
             <NavLink
+              style={{ marginRight: "10px" }}
+              to={routes.HOME}
+              title="home"
+              style={{ textDecoration: "none" }}
+            >
+              Home
+            </NavLink>
+          </li>
+          <li className="section-list-element">
+            <NavLink
               to={routes.SKILLS}
               title="skills"
               style={{ textDecoration: "none" }}
             >
-              Skills
+              About
             </NavLink>
           </li>
           <li className="section-list-element">

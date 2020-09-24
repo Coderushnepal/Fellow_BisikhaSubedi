@@ -1,12 +1,70 @@
-.skills-page {
+body {
+  height: 100vh;
   background-color: rgb(62 68 82) !important;
+}
+
+.about-page {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: absolute;
+  min-height: 100vh;
+  /* z-index: 1; */
 }
 
 .sidenav-container {
   background-color: #e31b6d;
   height: 40px;
   border-radius: 30px;
+}
+
+.about-container {
+  width: 100%;
+  position: absolute;
+}
+
+.about-clearfix {
+  clear: both;
+}
+
+.about-left {
+  float: left;
+  width: 30%;
+  padding: 20px;
+}
+
+.about-right {
+  float: right;
+  text-align: center;
+  font-family: "Crimson Text", serif;
+  font-size: 40px;
+  color: #ffffff;
+  width: 60%;
+}
+
+.progress-bar {
+  width: 80%;
+}
+
+.progress-left {
+  float: left;
+}
+
+.progress-right {
+  float: right;
+}
+
+.media {
+  margin-top: 60px;
+}
+
+.media a {
+  color: #ffffff;
+}
+
+.media a:hover {
+  color: lightblue;
+}
+
+.media i {
+  margin-right: 20px;
 }

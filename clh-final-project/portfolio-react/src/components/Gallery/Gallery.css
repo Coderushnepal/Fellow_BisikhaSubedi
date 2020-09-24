@@ -1,16 +1,64 @@
 .gallery-page-container {
   background-color: rgb(62 68 82) !important;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   position: absolute;
 }
 
 .gallery-container {
   border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 60px;
-  margin: 50px auto;
-  width: 50%;
-  /* position: absolute;
-    z-index: 1; */
+  margin: 10px auto 5px auto;
+}
+
+.gallery-image {
+  width: 900px;
+  height: 480px;
+}
+
+.gallery-wrapper {
+  text-align: center;
+}
+
+.photo-caption {
+  /* font-family: "Cedarville Cursive", cursive; */
+  /* color: grey; */
+  font-size: 40px;
+  font-family: "Crimson Text", serif;
+  color: #ffffff;
+}
+
+.slider-btn-primary {
+  z-index: 999999;
+  background-color: pink;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-btn-primary {
+  position: absolute;
+  /* transform: translateY(-100%); */
+  background: rgba(0, 0, 0, 0.7);
+  height: 3rem;
+  width: 3rem;
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+}
+
+.slider-button-left {
+  top: 35%;
+  left: 100px;
+}
+
+.slider-button-right {
+  top: 35%;
+  right: 100px;
 }

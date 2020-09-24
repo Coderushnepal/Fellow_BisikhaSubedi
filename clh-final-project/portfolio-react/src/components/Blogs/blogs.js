@@ -17,7 +17,7 @@ class Blogs extends React.Component {
   }
 
   render() {
-    console.log(this.state.blogs);
+    // console.log(this.state.blogs);
     return (
       <div className="blogs-page-container">
         <div className="sidenav-container">
@@ -26,8 +26,16 @@ class Blogs extends React.Component {
         <div className="blogs-container">
           {this.state.blogs.map((blog) => (
             <div key={`blogs-${blog.id}`}>
-              <h1 className="blog-title">{blog.title}</h1>),
+              <p className="blog-title">{blog.title}</p>
               <p className="blog-description">{blog.description}</p>
+              {/* <p className="blog-excerpt">{blog.excerpt}</p> */}
+              <p className="blog-excerpt">{blog.published_on}</p>
+              <hr
+                width="50%"
+                size="8"
+                align="center"
+                style={{ marginTop: "50px" }}
+              ></hr>
             </div>
           ))}
         </div>

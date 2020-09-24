@@ -17,11 +17,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div className="portfolio-container">
-          <div className="main-section-container">
-            <Router />
-          </div>
-        </div>
+        <Router />
       </BrowserRouter>
     );
   }

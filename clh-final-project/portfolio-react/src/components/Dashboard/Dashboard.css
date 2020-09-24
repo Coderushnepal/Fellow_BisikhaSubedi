@@ -28,7 +28,11 @@
   width: 45%;
 }
 
-.button {
+.button-logout {
   z-index: 1;
   position: absolute;
+  color: #ffffff;
+  background-color: #e31b6d;
+  padding: 4px 20px;
+  border-radius: 8px;
 }

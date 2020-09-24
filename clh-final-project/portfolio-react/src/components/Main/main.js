@@ -27,7 +27,7 @@ const Main = () => {
             options={{
               strings: [
                 "Nepali",
-                "Software Developer in making",
+                "Software Developer to be",
                 "Computer Engineer, yo!",
               ],
               autoStart: true,
@@ -39,7 +39,7 @@ const Main = () => {
           <button className="primary-btn view-work left" onClick={routeSkills}>
             View my work
           </button>
-          <button className="primary-btn view-cv">Download CV</button>
+          {/* <button className="primary-btn view-cv">Download CV</button> */}
         </div>
       </div>
       <Particles />

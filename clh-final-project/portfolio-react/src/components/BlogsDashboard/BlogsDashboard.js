@@ -40,7 +40,7 @@ class BlogsDashboard extends Component {
     event.preventDefault();
   };
   render() {
-    const { title, description } = this.state.formData;
+    const { title, description, excerpt, published_on } = this.state.formData;
     return (
       <div className="create">
         <form onSubmit={this.handleSubmit}>
@@ -66,6 +66,9 @@ class BlogsDashboard extends Component {
             placeholder="Enter blog text"
             required
           ></textarea>
+          <br />
+          <label>Excerpt :</label>
+          <br></br>
           <br />
           <button onClick={this.fetchData} className="button" type="submit">
             submit
