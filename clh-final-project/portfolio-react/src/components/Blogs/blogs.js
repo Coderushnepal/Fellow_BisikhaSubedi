@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import SideNav from "../../constants/SideNav/SideNav";
+import "./Blogs.css";
 
 class Blogs extends React.Component {
   state = {
@@ -24,10 +25,10 @@ class Blogs extends React.Component {
         </div>
         <div className="blogs-container">
           {this.state.blogs.map((blog) => (
-            <li>
-              {blog.title}
-              {blog.description}
-            </li>
+            <div key={`blogs-${blog.id}`}>
+              <h1 className="blog-title">{blog.title}</h1>),
+              <p className="blog-description">{blog.description}</p>
+            </div>
           ))}
         </div>
       </div>

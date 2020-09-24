@@ -11,8 +11,8 @@ input[type="text"] {
   margin-top: 20px;
   width: 100%;
   padding: 10px;
-  background-color: blue;
-  border-color: blue;
+  background-color: #e31b6d;
+  border-color: #e31b6d;
   text-align: center;
   border-radius: 10px;
   color: white;
@@ -25,8 +25,10 @@ input[type="file"] {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 60px;
-  margin: 100px auto;
+  margin: 50px auto;
   width: 50%;
+  /* position: absolute;
+  z-index: 1; */
 }
 
 @keyframes slideNavLink {

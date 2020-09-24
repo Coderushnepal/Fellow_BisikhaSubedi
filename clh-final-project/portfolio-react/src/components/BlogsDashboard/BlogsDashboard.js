@@ -58,6 +58,8 @@ class BlogsDashboard extends Component {
           <label>description :</label>
           <br></br>
           <textarea
+            cols="40"
+            rows="10"
             onChange={this.handleChange}
             name="description"
             value={description}

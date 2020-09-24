@@ -17,9 +17,9 @@ const CreatePost = () => {
         })
         // .then((res) => res.json())
         .then((data) => {
-          console.log(data.details);
-          console.log(data);
-          history.push("/");
+          // console.log(data.details);
+          // console.log(data);
+          history.push("/gallery");
         });
     }
   }, [url]);

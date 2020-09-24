@@ -1,0 +1,34 @@
+.dashboard-container {
+  background-color: rgb(62 68 82) !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.text {
+  color: #ffffff;
+  text-align: center;
+}
+
+.create {
+  color: #e31b6d;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.blogs-dashboard {
+  float: left;
+  width: 45%;
+}
+
+.gallery-dashboard {
+  float: right;
+  width: 45%;
+}
+
+.button {
+  z-index: 1;
+  position: absolute;
+}

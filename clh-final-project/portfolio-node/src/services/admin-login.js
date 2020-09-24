@@ -1,6 +1,6 @@
 import logger from "../util/logger";
 import * as adminLoginModels from "../models/admin-login";
-// import { generateToken } from "../util/jwt";
+import { generateToken } from "../util/jwt";
 import { hash, compare } from "../util/crypt";
 import NotFoundError from "../util/NotFoundError";
 // import * as adminSession from "../models/adminSession";
@@ -54,9 +54,17 @@ export async function adminLogin(preq) {
     throw new BadRequestError("Invalid login credentials");
   }
 
+  // const tokenPreq = {
+  //   id: adminLogin.id,
+  //   email: adminLogin.email,
+  // };
+
+  const token = generateToken(admin);
+
   return {
     data: {
       admin,
+      token,
     },
     message: "Logged In Successfully!!",
   };

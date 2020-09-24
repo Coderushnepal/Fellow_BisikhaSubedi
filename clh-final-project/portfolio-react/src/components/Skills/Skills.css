@@ -1,0 +1,12 @@
+.skills-page {
+  background-color: rgb(62 68 82) !important;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.sidenav-container {
+  background-color: #e31b6d;
+  height: 40px;
+  border-radius: 30px;
+}

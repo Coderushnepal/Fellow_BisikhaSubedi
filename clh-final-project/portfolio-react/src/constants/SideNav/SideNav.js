@@ -9,8 +9,17 @@ class SideNav extends Component {
   render() {
     return (
       <div className="sidenav">
-        <div className="section-list">
-          <p className="section-list-element">
+        <ul className="section-list">
+          <li className="section-list-element">
+            <NavLink
+              to={routes.SKILLS}
+              title="skills"
+              style={{ textDecoration: "none" }}
+            >
+              Skills
+            </NavLink>
+          </li>
+          <li className="section-list-element">
             <NavLink
               to={routes.BLOGS}
               title="blogs"
@@ -18,8 +27,8 @@ class SideNav extends Component {
             >
               Blogs
             </NavLink>
-          </p>
-          <p className="section-list-element">
+          </li>
+          <li className="section-list-element">
             <NavLink
               to={routes.GALLERY}
               title="gallery"
@@ -27,8 +36,8 @@ class SideNav extends Component {
             >
               Gallery
             </NavLink>
-          </p>
-        </div>
+          </li>
+        </ul>
       </div>
     );
   }

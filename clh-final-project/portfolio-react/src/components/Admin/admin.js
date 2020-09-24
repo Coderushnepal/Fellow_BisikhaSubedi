@@ -25,6 +25,9 @@ class Admin extends React.Component {
     })
       .then((res) => {
         console.log(res);
+        const token = res.data.data.token;
+        localStorage.setItem("Token", token);
+        this.props.history.push("/dashboard");
       })
       .catch((err) => {
         console.log(err);
@@ -44,6 +47,7 @@ class Admin extends React.Component {
     event.preventDefault();
 
     const { email, password } = this.state.formData;
+
     console.log(email, password);
     if (!email || !password) {
       let fieldName;
@@ -65,48 +69,41 @@ class Admin extends React.Component {
     // console.log(this.state.formData);
     const { email, password } = this.state.formData;
     return (
-      <form onSubmit={this.handleSubmit} className="login-form">
-        <span className="login-form-title"> Admin Login </span>
-        <span className="txt"> Email </span>
-        <div className="wrap-input">
-          <input
-            onChange={this.handleChange}
-            className="input-value"
-            type="email"
-            id="email"
-            name="email"
-            value={email}
-            required
-          />
+      <div className="admin-container">
+        <div className="login-text"> Admin Login </div>
+        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+          <div className="create">
+            <form onSubmit={this.handleSubmit} className="admin-form">
+              <label className="label"> Email: </label>
+              <br></br>
+              <input
+                onChange={this.handleChange}
+                className="input-value"
+                type="email"
+                id="email"
+                name="email"
+                value={email}
+                required
+              />
+              <br></br>
+              <label className="label"> Password: </label>
+              <br></br>
+              <input
+                onChange={this.handleChange}
+                className="input-value"
+                type="password"
+                name="password"
+                id="myInput"
+                value={password}
+              />
+              <br></br>
+              <button className="login-button" onClick={this.fetchData}>
+                LOG IN
+              </button>
+            </form>
+          </div>
         </div>
-        <span className="txt"> Password </span>
-        <div className="wrap-input">
-          <span className="btn-show-pass">
-            <i
-              id="eyeIcon"
-              className="fa fa-eye"
-              //  onClick="myFunction()"
-            ></i>
-          </span>
-          <input
-            onChange={this.handleChange}
-            className="input-value"
-            type="password"
-            name="password"
-            id="myInput"
-            value={password}
-          />
-        </div>
-        <div className="container-login-form-btn">
-          <button
-            type="submit"
-            className="login-form-btn"
-            onClick={this.fetchData}
-          >
-            LOG IN
-          </button>
-        </div>
-      </form>
+      </div>
     );
   }
 }

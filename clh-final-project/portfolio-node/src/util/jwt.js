@@ -2,7 +2,7 @@ import { sign, decode } from "jsonwebtoken";
 
 export function generateToken(admin) {
   return sign(admin, process.env.TOKEN_SECRET, {
-    expiresIn: 1200,
+    expiresIn: 12000,
   });
 }
 

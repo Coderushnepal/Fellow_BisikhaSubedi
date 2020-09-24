@@ -1,48 +1,16 @@
-.sections-list::before,
-.sections-list::after {
+.section-list li {
+  list-style-type: none;
   display: inline-block;
-  content: "";
-  border-top: 1px solid black;
-  width: 4rem;
-  margin-top: 0;
-  margin-bottom: -10px;
-  transform: translateY(-1rem);
-  /* text-decoration: none; */
-}
-
-a {
   color: #ffffff;
-  border-radius: 20px;
-  padding: 0.4rem;
-  display: inline-block;
-  margin-top: 0.5rem;
+  padding-right: 20px;
+  font-size: 25px;
+  font-style: italic;
 }
 
-.sidenav {
-  width: 300px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.sidenav-container {
+  width: 30%;
 }
 
-a.active {
-  color: #379cea;
-}
-
-.section-list-element {
-  font-size: 21px;
-  margin: 8px;
-  /* padding: 12px; */
-  font-weight: 600;
-}
-
-.section-list-element:hover {
-  cursor: pointer;
-  font-size: 21.5px;
-}
-
-a:hover {
-  background: rgba(56, 161, 242, 0.2);
-  color: #379cea;
+.section-list-element a {
+  color: #ffffff;
 }
